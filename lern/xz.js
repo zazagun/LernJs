@@ -67,8 +67,8 @@ function parsing(){
 }
 //parsing()
 
+console.log("oreo")
 
-
-
+let pisina = 10000000
 
 //2.27.35
