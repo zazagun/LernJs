@@ -73,4 +73,28 @@ function parsing(){
 
 
 
+const myPromise = new Promise((resolve, reject) => {
+    const customReject = () => console.log("bichii penis");
+    const customResolve = function(num) {
+        console.log(num / 2);
+        if (num < 10) {
+            console.log("смолл");
+        } else if (num > 10) {
+            customReject();
+        }
+    };
+
+    // Вызываем resolve с нужным параметром
+    resolve(customResolve);
+});
+
+// Передаем параметр в функцию resolve
+myPromise.then((customResolve) => {
+    customResolve(25);
+});
+
+
+
+
+
 //2.27.35
