@@ -69,4 +69,8 @@ function parsing(){
 
 console.log("oreo")
 
+let penis = 12412312
+let iii = 12;
+
+
 //2.27.35
