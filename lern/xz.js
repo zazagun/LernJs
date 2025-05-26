@@ -74,5 +74,8 @@ function parsing(){
 console.log(
     "никита рил ест много какашек ежедневно"
 )
+function n (ddfdfd){
+    console.log("fdjnfksngfksinhfndidnsfosfnusofdsnfnfsdonsofndsfnsdfn")
+}
 
 //2.27.35
