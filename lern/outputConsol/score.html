@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<script>
+    function logToConsole() {
+        let inputValue = document.getElementById("inputField").value;
+        const MEME = "Shpepe";
+        const ERROR = "Это не число";
+        const valueTextElement = document.getElementById("valueText");
+        const missElement = document.getElementById("miss");
+
+        valueTextElement.textContent = "";
+        missElement.textContent = "";
+
+        const numberValue = parseInt(inputValue, 10);
+
+        if (!isNaN(numberValue)) {
+            for (let i = 0; i < numberValue; i++) {
+                valueTextElement.textContent += MEME + " ";
+            }
+        } else {
+            missElement.textContent = ERROR;
+        }
+    }
+
+    function KeyDown(event) {
+        if (event.key === "Enter") {
+            logToConsole();
+        }
+    }
+</script>
+
+<body>
+    <h1 style="color: rgb(0, 71, 133);">Введите Количество повторений</h1>
+
+    <input type="text" 
+    id="inputField" 
+    placeholder="Количество повторений" 
+    onkeydown="KeyDown(event)">
+
+    <div class="buttonAc"><button onclick="logToConsole()">Нажать</button></div>
+
+    <span 
+    id="valueText" 
+    style="color: rgb(3, 70, 39); 
+    font-family: Arial, Helvetica, sans-serif;">
+    </span>
+
+    <span 
+    id="miss" 
+    style="color: rgb(177, 18, 18);
+    font-family: Arial, Helvetica, sans-serif;">
+    </span>
+</body>
+
+</html>
+
+
