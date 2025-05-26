@@ -13,11 +13,13 @@ function delet(){
 let names = {
     antoshka: {
         SecName: 'pipirkin',
-        Thrname: 'zalupikin'
+        Thrname: 'zalupikin',
+        lastName: "nigritok"
     },
     Maxonchik:{
         SecName: 'mushka',
-        Thrname: 'mishustik'
+        Thrname: 'mishustik',
+        lastName: "nigritok"
     }
 }
 //console.log(names.antoshka.SecName)
@@ -67,10 +69,6 @@ function parsing(){
 }
 //parsing()
 
-console.log("oreo")
-
-let penis = 12412312
-let iii = 12;
 
 
 //2.27.35
