@@ -15,13 +15,13 @@ let names = {
         SecName: 'pipirkin',
         Thrname: 'zalupikin',
         lastName: "nigritok",
-        male: "debich"
+        sex: "male"
     },
     Maxonchik:{
         SecName: 'mushka',
         Thrname: 'mishustik',
         lastName: "nigritok",
-        male: "NORMIS"
+        sex: "female"
     }
 }
 //console.log(names.antoshka.SecName)
@@ -71,11 +71,6 @@ function parsing(){
 }
 //parsing()
 
-console.log(
-    "никита рил ест много какашек ежедневно"
-)
-function n (ddfdfd){
-    console.log("fdjnfksngfksinhfndidnsfosfnusofdsnfnfsdonsofndsfnsdfn")
-}
+
 
 //2.27.35
