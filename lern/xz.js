@@ -88,13 +88,11 @@ const myPromise = new Promise((resolve, reject) => {
     resolve(customResolve);
 });
 
-// Передаем параметр в функцию resolve
-myPromise.then((customResolve) => {
-    customResolve(25);
-});
-
-
-
+console.log("никитиа съел мою какашку")
+function n(nums){
+    console.log(nums)
+}
+n(12)
 
 
 //2.27.35
