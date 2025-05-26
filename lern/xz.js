@@ -69,22 +69,4 @@ function parsing(){
 
 
 
-//проверка чет или нет
-function sumAndCheckEvenOdd(a, b) {
-    const sum = a + b;
-    if (sum % 2 === 0) {
-        return "Сумма четная";
-        
-    } else {
-        return "Сумма нечетная";
-        console.log("name")
-    }
-
-}
-// Пример использования функции
-//console.log(sumAndCheckEvenOdd(2, 3)); // Сумма нечетная
-//console.log(sumAndCheckEvenOdd(2, 4)); // Сумма четная
-
-
-
 //2.27.35
