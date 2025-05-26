@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Input</title>
+</head>
+<style>
+    body{
+        background-color: blueviolet;
+    }
+    .block{
+        display: block;
+        text-align: center;
+        margin: 0 auto; 
+        width: 400px;
+        height: 210px;
+        border-radius: 35px;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background-color: rgb(85, 10, 110);
+    }
+    .field{
+        display: block;
+        
+    }
+    .buttonAc{
+        display: block;
+        text-align: center;
+        margin: 0 auto; 
+        margin-top: 20px;
+        background-color: rgb(212, 8, 182); 
+        width: 140px;
+        border-radius: 35px;
+    }
+    input{
+        border: none;          
+        border-bottom: 2px solid black; 
+        outline: none;        
+        padding: 5px;          
+        font-size: 16px;
+        text-align: center; 
+        background-color: rgb(212, 8, 182); 
+        color: azure;
+    }
+    #valueText{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+    }
+</style>
+<body>
+    <div class="block">
+
+        <h1 style="color: aliceblue;">Введите значение</h1>
+            <div class="field">
+                <input type="text" id="inputField" placeholder="Введите текст здесь">
+            <br>
+            <spn class="buttonAc">
+                <button onclick="logToConsole()">Отправить в консоль</button>
+            </spn>
+            </div>
+        <br>
+        <span id="valueText" style="color: aliceblue;"></span>
+
+    </div>
+    
+
+    <script>
+        function logToConsole() {
+            let inputValue = document.getElementById("inputField").value;
+            
+            document.getElementById("valueText").textContent = inputValue
+
+            console.log(inputValue);
+        }
+    </script>
+</body>
+</html>

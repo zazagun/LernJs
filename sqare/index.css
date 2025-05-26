@@ -1,0 +1,340 @@
+@keyframes flexs {
+    0%{
+        transform: translateX(-200px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(200px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-200px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(200px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-200px);
+        background-color: #0379ff;
+    }
+}
+@keyframes niga {
+    0%{
+        transform: translateX(-180px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(180px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-180px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(180px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-180px);
+        background-color: #0379ff;
+    }
+}
+@keyframes boag {
+    0%{
+        transform: translateX(-160px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(160px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-160px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(160px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-160px);
+        background-color: #0379ff;
+    }
+}
+@keyframes gyg {
+    0%{
+        transform: translateX(-140px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(140px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-140px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(140px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-140px);
+        background-color: #0379ff;
+    }
+}
+@keyframes zuz {
+    0%{
+        transform: translateX(-120px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(120px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-120px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(120px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-120px);
+        background-color: #0379ff;
+    }
+}
+@keyframes zuzi {
+    0%{
+        transform: translateX(-140px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(140px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-140px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(140px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-140px);
+        background-color: #0379ff;
+    }
+}
+@keyframes zuziz {
+    0%{
+        transform: translateX(-160px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(160px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-160px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(160px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-160px);
+        background-color: #0379ff;
+    }
+}
+@keyframes sama {
+    0%{
+        transform: translateX(-160px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(160px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-160px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(160px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-160px);
+        background-color: #0379ff;
+    }
+}
+@keyframes samua {
+    0%{
+        transform: translateX(-180px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(180px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-180px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(180px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-180px);
+        background-color: #0379ff;
+    }
+}
+@keyframes samaa {
+    0%{
+        transform: translateX(-200px);
+        background-color: #ff0000;
+    }
+    25%{
+        transform: translateX(200px);
+        background-color: #ff6200;
+
+    }
+    50%{
+        transform: translateX(-200px);
+        background-color: #4b520d;
+    }
+    75%{
+        transform: translateX(200px);
+        background-color: #15ff00;
+    }
+    100%{
+        transform: translateX(-200px);
+        background-color: #0379ff;
+    }
+}
+.sqare{
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    animation-name: flexs;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    display: flex;
+    margin-left: 300px;
+}
+.sqare_2{
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    animation-name: niga;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 300px;
+}
+.sqare_3{
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    animation-name: boag;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 300px;
+}
+.sqare_4{
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    animation-name: gyg;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 300px;
+}
+.sqare_5{
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    animation-name: zuz;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 300px;
+}
+.sqare_6{
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    animation-name: zuzi;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 300px;
+}
+.sqare_7{
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    animation-name: sama;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 300px;
+}
+.sqare_8{
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    animation-name: samua;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 300px;
+}
+.sqare_9{
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    animation-name: samaa;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-left: 300px;
+}
+
+
+body{
+    animation-duration: 4s;
+    animation-name: bock;
+    animation-iteration-count: infinite;
+    z-index: -100px;
+}
+
+
+@keyframes bock {
+    0%{
+        background-color: #329a0900;
+    }
+    25%{
+        background-color: #eeffa986;
+
+    }
+    50%{
+        background-color: #0dcda3;
+    }
+    75%{
+        background-color: #300270;
+    }
+    100%{
+        background-color: #8776a0;
+    }
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="./xz.js" defer></script>
+</head>
+<body>
+    <div style="display: block;  font-size: 30px;">
+        <p>Длинна окна вашего браузера:<span id="height"></span></p>
+        <p>Ширина окна вашего браузера:<span id="width"></span></p>
+    </div>
+</body>
+<script>
+//присваевание
+    let hi = window.innerHeight;
+    let widthss = window.innerWidth
+
+//создание элементов
+    document.getElementById("height").textContent = hi;
+    document.getElementById("width").textContent = widthss
+
+//listener
+    window.addEventListener('resize', function() {
+        hi = window.innerHeight;
+        widthss = window.innerWidth;   
+        document.getElementById("height").textContent = hi;
+        document.getElementById("width").textContent = widthss;
+    });
+</script>
+</html>
+
+
