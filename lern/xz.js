@@ -71,28 +71,8 @@ function parsing(){
 }
 //parsing()
 
-
-
-const myPromise = new Promise((resolve, reject) => {
-    const customReject = () => console.log("bichii penis");
-    const customResolve = function(num) {
-        console.log(num / 2);
-        if (num < 10) {
-            console.log("смолл");
-        } else if (num > 10) {
-            customReject();
-        }
-    };
-
-    // Вызываем resolve с нужным параметром
-    resolve(customResolve);
-});
-
-console.log("никитиа съел мою какашку")
-function n(nums){
-    console.log(nums)
-}
-n(12)
-
+console.log(
+    "никита рил ест много какашек ежедневно"
+)
 
 //2.27.35
