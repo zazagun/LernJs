@@ -14,12 +14,14 @@ let names = {
     antoshka: {
         SecName: 'pipirkin',
         Thrname: 'zalupikin',
-        lastName: "nigritok"
+        lastName: "nigritok",
+        male: "debich"
     },
     Maxonchik:{
         SecName: 'mushka',
         Thrname: 'mishustik',
-        lastName: "nigritok"
+        lastName: "nigritok",
+        male: "NORMIS"
     }
 }
 //console.log(names.antoshka.SecName)
