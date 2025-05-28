@@ -71,22 +71,20 @@ function parsing(){
 }
 //parsing()
 
-let subgect = {
-    oneMore:{
-        "One": true,
-        "two": false,
-        "thre": true
-    },
-    somebody:{
-        "One": true,
-        "two": false,
-        "thre": true
-    },
-    dura:{
-        One: undefined
-    }
-}
+const chars = '+_-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
 
-console.log(subgect.dura.One)
+const ArryOfPasswords = [];
+for (let n = 0; n < 5; n++) {
+    let PushingToArray = '';
+    for (let i = 0; i < 10; i++) {
+        PushingToArray += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    ArryOfPasswords.push(PushingToArray);
+}   
+// console.log(ArryOfPasswords)
+
+let ch = '12345'
+console.log(ch.charAt(Math.floor(Math.random() * ch.length)))
+
 
 //2.27.35
