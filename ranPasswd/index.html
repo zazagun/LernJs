@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(117, 7, 227, 0.512);
+    color: aliceblue;
+}
+
+#mainBlock {
+    margin-top: -10em;
+    border: solid 2px rgb(255, 255, 255);
+    text-align: center;
+    padding: 5px 35px 20px 35px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 38px 20px rgba(94, 11, 91, 0.22);
+}
+#submit{
+    width: 7em;
+    height: 1.3em;
+}
+.header{
+    background-color: blueviolet;
+    width: 10em;
+    height: 100%;
+}
+#output{
+    display: block;
+    margin-top: 10px;
+}
+</style>
+
+<!-- визуал -->
+<div class="header">
+</div>
+
+<body>
+    <div id="mainBlock">
+    <table id="mainTable">
+        <tr>
+            <h1>Случайный пароль</h1>
+        </tr>
+        <tr>
+            <input id="ManyPassword" type="number" placeholder="Количество паролей" min="1">
+        </tr>
+            <br>
+            <br>
+        <tr>
+            <input id="lengthPassword" type="number" placeholder="Длинна пароля" min="1">
+        </tr>
+            <br>
+            <br>
+        <tr>
+            <button id="submit" onclick="MakePassword()"></button>
+        </tr>
+    </table>
+    <div id="output"></div>
+    </div>
+</body>
+
+<!-- визуал -->
+<div class="header">
+</div>
+
+<script>
+    function MakePassword(){
+        const HowManyPassword = parseInt(document.getElementById('ManyPassword').value);
+        const lengthPassword = parseInt(document.getElementById('lengthPassword').value);
+        const ResultPassword = document.getElementById('output')
+        const Error = "Введите корректные числа"
+
+        if (isNaN(HowManyPassword) || isNaN(lengthPassword)){
+            document.getElementById('output').textContent = Error
+        }
+
+    }
+</script>
+</html>
