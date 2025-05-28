@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            padding: 8px;
+            margin: 5px 0;
+        }
+        #passwords {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Password Generator</h1>
+    <div>
+        <label for="length">Длина пароля:</label>
+        <input type="number" id="length" min="1">
+    </div>
+    <div>
+        <label for="number">Количество паролей:</label>
+        <input type="number" id="number" min="1">
+    </div>
+    <button onclick="generatePasswords()">Сгенерировать пароли</button>
+    <div id="passwords"></div>
+
+    <script>
+        const chars = '+_-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+
+        function generatePasswords() {
+            const length = parseInt(document.getElementById('length').value);
+            const number = parseInt(document.getElementById('number').value);
+            const passwordsDiv = document.getElementById('passwords');
+
+            if (isNaN(length) || isNaN(number)) {
+                passwordsDiv.innerHTML = 'Пожалуйста, введите корректные числа.';
+                return;
+            }
+
+            let passwords = [];
+            for (let n = 0; n < number; n++) {
+                let password = '';
+                for (let i = 0; i < length; i++) {
+                    password += chars.charAt(Math.floor(Math.random() * chars.length));
+                }
+                passwords.push(password);
+            }
+
+            passwordsDiv.innerHTML = passwords.join('<br>');
+        }
+    </script>
+</body>
+</html>
