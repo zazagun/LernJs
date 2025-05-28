@@ -83,8 +83,31 @@ for (let n = 0; n < 5; n++) {
 }   
 // console.log(ArryOfPasswords)
 
+<<<<<<< Updated upstream
 let ch = '12345'
 console.log(ch.charAt(Math.floor(Math.random() * ch.length)))
+=======
+const myPromise = new Promise((resolve, reject) => {
+    const customReject = () => console.log("bichii penis");
+    const customResolve = function(num) {
+        console.log(num / 2);
+        if (num < 10) {
+            console.log("смолл");
+        } else if (num > 10) {
+            customReject();
+        }
+    };
+
+
+    resolve(customResolve);
+});
+
+console.log("никитиа съел мою какашку")
+function n(nums){
+    console.log(nums)
+}
+n(12)
+>>>>>>> Stashed changes
 
 
 //2.27.35
