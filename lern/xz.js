@@ -72,12 +72,12 @@ function parsing(){
 //parsing()
 
 let subgect = {
-    sanina:{
+    oneMore:{
         "One": true,
         "two": false,
         "thre": true
     },
-    belka:{
+    somebody:{
         "One": true,
         "two": false,
         "thre": true
