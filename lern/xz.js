@@ -71,43 +71,5 @@ function parsing(){
 }
 //parsing()
 
-const chars = '+_-/*!&$#?=@<>abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
-
-const ArryOfPasswords = [];
-for (let n = 0; n < 5; n++) {
-    let PushingToArray = '';
-    for (let i = 0; i < 10; i++) {
-        PushingToArray += chars.charAt(Math.floor(Math.random() * chars.length));
-    }
-    ArryOfPasswords.push(PushingToArray);
-}   
-// console.log(ArryOfPasswords)
-
-<<<<<<< Updated upstream
-let ch = '12345'
-console.log(ch.charAt(Math.floor(Math.random() * ch.length)))
-=======
-const myPromise = new Promise((resolve, reject) => {
-    const customReject = () => console.log("bichii penis");
-    const customResolve = function(num) {
-        console.log(num / 2);
-        if (num < 10) {
-            console.log("смолл");
-        } else if (num > 10) {
-            customReject();
-        }
-    };
-
-
-    resolve(customResolve);
-});
-
-console.log("никитиа съел мою какашку")
-function n(nums){
-    console.log(nums)
-}
-n(12)
->>>>>>> Stashed changes
-
 
 //2.27.35
