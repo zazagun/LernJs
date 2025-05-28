@@ -71,6 +71,22 @@ function parsing(){
 }
 //parsing()
 
+let subgect = {
+    sanina:{
+        "One": true,
+        "two": false,
+        "thre": true
+    },
+    belka:{
+        "One": true,
+        "two": false,
+        "thre": true
+    },
+    dura:{
+        One: undefined
+    }
+}
 
+console.log(subgect.dura.One)
 
 //2.27.35
