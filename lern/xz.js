@@ -72,4 +72,19 @@ function parsing(){
 //parsing()
 
 
+//рандомное значение 
+const array = [1,2,15,massiv = {name: "js", let: "change"}, 'name', 14, false];
+const lengthArray = array.length 
+
+function result(number){
+    for(i=0; i < number; i++){
+        mainResult = array[(Math.floor(Math.random() * lengthArray))]
+        console.log(mainResult)
+    }
+}
+//result(5)
+
+
+
+
 //2.27.35
