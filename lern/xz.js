@@ -27,6 +27,18 @@ let names = {
 //console.log(names.antoshka.SecName)
 
 
+//проверка node или браузерное api
+function Broze(){
+    if (typeof(window) === 'undefined'){
+        console.log('это nodeJS')
+    }else if(typeof(window) !== 'undefined'){
+        console.log('это браузерное API')
+    }else{
+        console.log('хз чо за среда')
+    }
+}
+//Broze()
+
 
 //изменение типа значения на str
 let mas = JSON.stringify({ hello: undefined, test: 1 }, (key, value) => {
@@ -50,7 +62,7 @@ objLet.item = "foo";
 //console.log(objConst, objLet);
 
 
-//итерации
+//итерации через параметр
 let path = function(score){
     for(; score > 0; score--){
         console.log("penis")
@@ -85,6 +97,32 @@ function result(number){
 //result(5)
 
 
+//пример мутации через копирование 
+const info = {
+    name: "jon",
+    age: 25
+}
+const info2 = info
+info2.name = 'maximka'
+info2.black = true
+
+//console.log(info)
 
 
-//2.27.35
+//как избежать мутации через Object.assign
+const  person = {
+    name: "Maik",
+    age: 36
+}
+const personTwo = Object.assign({}, person)
+personTwo.name = 'maximka'
+personTwo.black = true
+
+console.log(person)
+
+
+
+
+
+
+//2.35.
