@@ -50,6 +50,13 @@ let mas = JSON.stringify({ hello: undefined, test: 1 }, (key, value) => {
 //console.log(mas)
 
 
+//вывод последнего символа в строке
+function lastChar(char){
+    console.log(char.charAt(char.length - 1))
+}
+//lastChar("hello wot")
+
+
 //изменение примитива в константе
 const objConst = {
   item: "foo",
@@ -66,7 +73,35 @@ objLet.item = "foo";
 function arrayDiff(a, b) {
     return a.filter(item => !b.includes(item))
 }
-console.log(arrayDiff([1, 2], [1])) 
+//console.log(arrayDiff([1, 2], [1]))
+function array_diff(a, b) {
+
+    let arr = new Array();
+    
+    for(let i = 0; i < a.length; i++){
+        if(b.indexOf(a[i])<0){
+            arr.push(a[i]);
+        }
+    }
+  
+    return arr;
+}
+//console.log(array_diff([1,4,2,3], [1,2,3]))
+
+
+//первое цифра из числа
+function firstNum(chislo){
+    let firstChar = String(chislo)[0]
+    return parseInt(firstChar)
+}
+//console.log(firstNum(952))
+
+
+//четное или не четное
+function evenOrNot(num){
+    return num % 2 === 0
+} 
+//console.log(evenOrNot(7))
 
 
 //итерации через параметр
@@ -91,7 +126,7 @@ function parsing(){
 //parsing()
 
 
-//рандомное значение 
+//рандомный примитив из объета 
 const array = [1,2,15,massiv = {name: "js", let: "change"}, 'name', 14, false];
 const lengthArray = array.length 
 
@@ -102,6 +137,17 @@ function result(number){
     }
 }
 //result(5)
+
+
+//првоерка на то одинаковы ли первые буквы двух слов
+function fierstCharacter(word1, word2){
+    if (word1.length > 0 && word2.length > 0){
+        return word1[0].toLowerCase() === word2[0].toLowerCase()
+    }else{
+        return false
+    }
+}
+//console.log(fierstCharacter('Maximka', "xarishke"))
 
 
 //пример мутации через копирование 
@@ -131,5 +177,5 @@ personTwo.black = true
 
 
 
-
 //2.35.00
+//code.mu 1.4 
