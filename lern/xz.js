@@ -9,24 +9,6 @@ function delet(){
 //delet()
 
 
-//вывод вложенного значения из объекта
-let names = {
-    antoshka: {
-        SecName: 'pipirkin',
-        Thrname: 'zalupikin',
-        lastName: "nigritok",
-        sex: "male"
-    },
-    Maxonchik:{
-        SecName: 'mushka',
-        Thrname: 'mishustik',
-        lastName: "nigritok",
-        sex: "female"
-    }
-}
-//console.log(names.antoshka.SecName)
-
-
 //проверка node или браузерное api
 function Broze(){
     if (typeof(window) === 'undefined'){
@@ -174,7 +156,7 @@ personTwo.black = true
 //console.log(person)
 
 
-
+console.log("jambooo")
 
 
 //2.35.00
