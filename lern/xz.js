@@ -62,6 +62,13 @@ objLet.item = "foo";
 //console.log(objConst, objLet);
 
 
+//вывод отсутствующих значений
+function arrayDiff(a, b) {
+    return a.filter(item => !b.includes(item))
+}
+console.log(arrayDiff([1, 2], [1])) 
+
+
 //итерации через параметр
 let path = function(score){
     for(; score > 0; score--){
@@ -118,11 +125,11 @@ const personTwo = Object.assign({}, person)
 personTwo.name = 'maximka'
 personTwo.black = true
 
-console.log(person)
+//console.log(person)
 
 
 
 
 
 
-//2.35.
+//2.35.00
