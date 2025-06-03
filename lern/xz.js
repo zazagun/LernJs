@@ -179,8 +179,8 @@ function dot(){
     name2 = "поменялось"
     jett2[1] = "поменялось"
 
-    console.log("Объект 1: " + name + " ||Объект 2: " + jett )
-    console.log("Объект 3: " + name2 + " ||Объект 4: " + jett2)
+    // console.log("Объект 1: " + name + " ||Объект 2: " + jett )
+    // console.log("Объект 3: " + name2 + " ||Объект 4: " + jett2)
 }
 //dot()
 
@@ -197,5 +197,7 @@ function parent(){
 }
 // parent().child()
 
-//2.35.00
+
+
+//2.39.20
 //code.mu 1.4 
