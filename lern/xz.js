@@ -154,26 +154,48 @@ personTwo.black = true
 
 //console.log(person)
 
-// как избежать мутации через оператор разделения объекта на свойства ...
+// как избежать мутации через оператор разделения объекта на свойства ... (spread)
+// ссылки на вложенные объекты сохраняются
 function dot(){
     const gyes = {
-    one:{name: "maximka",
-        secName: "durov"},
-    two:{name: "Marge",
-        secName: "gugin"}
-    }
-
+    one:{name: "maximka"},
+    two: "nope"
+}
     const gyes2 = {...gyes}
-    gyes2.one.name = 'idiot'
+    gyes2.one.name = 25
+    gyes2.one = "secs"
 
     console.log(gyes)
     console.log(gyes2)
+
+//spread с массивом
+    let name = 10
+    let jett = [190,2,3]
+
+    let name2 = name
+    let jett2 = [...jett]
+
+
+    name2 = "поменялось"
+    jett2[1] = "поменялось"
+
+    console.log("Объект 1: " + name + " ||Объект 2: " + jett )
+    console.log("Объект 3: " + name2 + " ||Объект 4: " + jett2)
 }
-dot()
-console.log(12 === "12")
-let sss = "delet"
+//dot()
 
 
+//замыкание
+function parent(){
+    const data = 23
+
+    return{
+        child(){
+            console.log(data)
+        }
+    }  
+}
+// parent().child()
 
 //2.35.00
 //code.mu 1.4 
