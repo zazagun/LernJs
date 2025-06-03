@@ -35,9 +35,8 @@ let mas = JSON.stringify({ hello: undefined, test: 1 }, (key, value) => {
 //вывод последнего символа в строке
 function lastChar(char){
     console.log(char.charAt(char.length - 1))
-    console.log(char[char.length-1])
 }
-// lastChar("hello wot")
+//lastChar("hello wot")
 
 
 //изменение примитива в константе
