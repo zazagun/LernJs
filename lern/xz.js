@@ -59,7 +59,6 @@ function arrayDiff(a, b) {
 function array_diff(a, b) {
 
     let arr = new Array();
-    
     for(let i = 0; i < a.length; i++){
         if(b.indexOf(a[i])<0){
             arr.push(a[i]);
@@ -155,8 +154,23 @@ personTwo.black = true
 
 //console.log(person)
 
+// как избежать мутации через оператор разделения объекта на свойства ...
+function dot(){
+    const gyes = {
+    one:{name: "maximka",
+        secName: "durov"},
+    two:{name: "Marge",
+        secName: "gugin"}
+    }
 
-console.log("jambooo")
+    const gyes2 = {...gyes}
+    gyes2.one.name = 'idiot'
+
+    console.log(gyes)
+    console.log(gyes2)
+}
+dot()
+
 
 
 //2.35.00
