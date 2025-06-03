@@ -95,23 +95,24 @@ let path = function(score){
 
 
 //парс и распарс JSON объекта
-const parsObj = require("./main.json")
+const JsonObgectFile = require("./main.json")
 
 function parsing(){
-    const parsed = JSON.stringify(parsObj)
+    const parsed = JSON.stringify(JsonObgectFile)
     console.log(parsed);
 
     const unParce = JSON.parse(parsed)
     console.log(unParce)
 }
-//parsing()
+parsing()
 
 
 //рандомный примитив из объета 
-const array = [1,2,15,massiv = {name: "js", let: "change"}, 'name', 14, false];
-const lengthArray = array.length 
-
 function result(number){
+
+const array = [1,2,15,massiv = {name: "js", let: "change"}, 'name', 14, false];
+const lengthArray = array.length    
+
     for(i=0; i < number; i++){
         mainResult = array[(Math.floor(Math.random() * lengthArray))]
         console.log(mainResult)
@@ -132,27 +133,35 @@ function fierstCharacter(word1, word2){
 
 
 //пример мутации через копирование 
-const info = {
-    name: "jon",
-    age: 25
-}
-const info2 = info
-info2.name = 'maximka'
-info2.black = true
+function mutaithion(){
+    const info = {
+        name: "jon",
+        age: 25
+    }
+    const info2 = info
+    info2.name = 'maximka'
+    info2.black = true
 
-//console.log(info)
+    console.log(info)
+}
+//mutaithion()
 
 
 //как избежать мутации через Object.assign
-const  person = {
+function assign(){
+    const  person = {
     name: "Maik",
     age: 36
-}
-const personTwo = Object.assign({}, person)
-personTwo.name = 'maximka'
-personTwo.black = true
+    }
 
-//console.log(person)
+    const personTwo = Object.assign({}, person)
+    personTwo.name = 'maximka'
+    personTwo.black = true
+
+    console.log(person)
+}
+//assign()
+
 
 // как избежать мутации через оператор разделения объекта на свойства ... (spread)
 // ссылки на вложенные объекты сохраняются
