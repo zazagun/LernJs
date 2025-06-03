@@ -170,6 +170,8 @@ function dot(){
     console.log(gyes2)
 }
 dot()
+console.log(12 === "12")
+let sss = "delet"
 
 
 
