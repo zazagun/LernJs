@@ -23,13 +23,18 @@ function Broze(){
 
 
 //изменение типа значения на str
-let mas = JSON.stringify({ hello: undefined, test: 1 }, (key, value) => {
+const changeMassiv = function(){
+    let mas = JSON.stringify({ hello: undefined, test: 1 }, (key, value) => {
     if (value === undefined) {
         return value = "undefined";
     }
     return value;
-});
-//console.log(mas)
+    });
+
+    console.log(mas)
+}
+//changeMassiv()
+
 
 
 //вывод последнего символа в строке
@@ -215,15 +220,16 @@ function stroca(){
 function parent(){
     const data = 23
 
-    return{
-        child(){
-            console.log(data)
-        }
-    }  
+    function child(){
+        console.log(data)
+    }
+    return child()
 }
-// parent().child()
+parent()
 
 
 
-//2.39.20
+
+
+//2.47.20
 //code.mu 1.4 
