@@ -104,7 +104,7 @@ function parsing(){
     const unParce = JSON.parse(parsed)
     console.log(unParce)
 }
-parsing()
+//parsing()
 
 
 //рандомный примитив из объета 
@@ -162,10 +162,9 @@ function assign(){
 }
 //assign()
 
-
 // как избежать мутации через оператор разделения объекта на свойства ... (spread)
 // ссылки на вложенные объекты сохраняются
-function dot(){
+function tripledot(){
     const gyes = {
     one:{name: "maximka"},
     two: "nope"
@@ -191,7 +190,25 @@ function dot(){
     // console.log("Объект 1: " + name + " ||Объект 2: " + jett )
     // console.log("Объект 3: " + name2 + " ||Объект 4: " + jett2)
 }
-//dot()
+//tripledot()
+
+//избегание мутации путем конвертации в строку и  распарса 
+function stroca(){
+    
+    const cabs = {
+        teacher: "sobakina",
+        position: {
+            floor: 18,
+            trash: "PC"
+        }
+    }
+
+    let cabs2 = JSON.parse(JSON.stringify(cabs))
+    cabs2.position.floor = "change"
+
+    console.log(cabs, "||",  cabs2)
+}
+//stroca()
 
 
 //замыкание
