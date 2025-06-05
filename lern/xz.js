@@ -225,9 +225,14 @@ function parent(){
     }
     return child()
 }
-parent()
+//parent() 
 
 
+//реверс строки
+function reverseString(string){
+    console.log(string.split('').reverse().join(''))
+}
+// reverseString("Some Body")
 
 
 
