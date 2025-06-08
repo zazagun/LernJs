@@ -235,6 +235,10 @@ function reverseString(string){
 // reverseString("Some Body")
 
 
+//пример колбэка функции
 
-//2.47.20
+
+
+
+//3.07.33
 //code.mu 1.4 
