@@ -115,15 +115,36 @@ function parsing(){
 //рандомный примитив из объета 
 function result(number){
 
-const array = [1,2,15,massiv = {name: "js", let: "change"}, 'name', 14, false];
-const lengthArray = array.length    
+    const array = [1,2,15,massiv = {name: "js", let: "change"}, 'name', 14, false];
+    const lengthArray = array.length
+    const ArrayOfRandomobg = []    
 
     for(i=0; i < number; i++){
         mainResult = array[(Math.floor(Math.random() * lengthArray))]
-        console.log(mainResult)
+        ArrayOfRandomobg.push(mainResult)
     }
+    console.log(ArrayOfRandomobg)
 }
-//result(5)
+// result(5)
+
+
+//Создание вложенных массивов с пересчетом
+let FullArray = []
+
+function masiivchik(){
+
+    for(n=1; n<=4; n++){       
+        masPlus = []
+
+        for(i=1; i<=3; i++){
+        masPlus.push(i)
+        }
+        
+        FullArray.push(masPlus )
+    }
+    console.log(FullArray)
+}
+//masiivchik()
 
 
 //првоерка на то одинаковы ли первые буквы двух слов
@@ -232,29 +253,16 @@ function parent(){
 function reverseString(string){
     console.log(string.split('').reverse().join(''))
 }
-// reverseString("Some Body")
+//reverseString("Some Body")
 
 
 //пример колбэка функции
 
 
-//3.8   задание 5
-let FullArray = []
-function masiivchik(){
 
-    let masPlus = []
 
-    for(n=1; n<3; n++){
-        
-        for(i=1;i<4;i++){
-        masPlus.push(i)
-        }
-        
-        FullArray.push(masPlus)
-    }
-}
-masiivchik()
-console.log(FullArray)
+
+
 
 //3.07.33
 //code.mu 1.4 
