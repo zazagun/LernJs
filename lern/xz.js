@@ -238,7 +238,23 @@ function reverseString(string){
 //пример колбэка функции
 
 
+//3.8   задание 5
+let FullArray = []
+function masiivchik(){
 
+    let masPlus = []
+
+    for(n=1; n<3; n++){
+        
+        for(i=1;i<4;i++){
+        masPlus.push(i)
+        }
+        
+        FullArray.push(masPlus)
+    }
+}
+masiivchik()
+console.log(FullArray)
 
 //3.07.33
 //code.mu 1.4 
