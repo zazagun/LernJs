@@ -36,6 +36,17 @@ const changeMassiv = function(){
 //changeMassiv()
 
 
+//сложение чисел от 1 до 100
+function OneToOneHangrit(){
+    let n = 0;
+
+    for(i=0; i<=100; i++){
+        n += i
+    }
+    console.log(n)
+}
+// OneToOneHangrit()
+
 
 //вывод последнего символа в строке
 function lastChar(char){
@@ -256,13 +267,7 @@ function reverseString(string){
 //reverseString("Some Body")
 
 
-//пример колбэка функции
-
-
-
-
-
 
 
 //3.07.33
-//code.mu 1.4 
+//code.mu 1.6 
