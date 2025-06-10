@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const RandomNumber = Math.floor(Math.random(1,10))
+    document.getElementById('title').textContent = RandomNumber
+</script>
+<body>
+    <div>
+        <span>
+        <h1>Отгадайте число</h1>
+        </span>
+        <span>
+            <input type="number" id="SomeNum">
+        </span>
+        <br>
+        <span>
+            <button id="InputField">Выбрать</button>
+        </span>
+        <br>
+        <span>
+            <p id="title"></p>
+        </span>
+    </div>
+</body>
+</html>
