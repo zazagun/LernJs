@@ -85,9 +85,12 @@ body, html {
         const LengthPassword = parseInt(document.getElementById('lengthPassword').value);
         const ResultPassword = document.getElementById('output');
         const Error = "Введите корректные числа"
+        const NoNumber = "Введите количество и длинну паролей"
 
         if (isNaN(HowManyPassword) || isNaN(LengthPassword)){
             return document.getElementById('output').textContent = Error
+        }else if(HowManyPassword === 0  || LengthPassword === 0){
+            return document.getElementById('output').textContent = NoNumber
         }
         
         let ArrayOfPasswords = []

@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Рандомное значение</title>
 </head>
-<script>
-    const RandomNumber = Math.floor(Math.random(1,10))
-    document.getElementById('title').textContent = RandomNumber
-</script>
 <body>
     <div>
         <span>
         <h1>Отгадайте число</h1>
         </span>
         <span>
-            <input type="number" id="SomeNum">
+            <input type="number" id="SomeNum" >
         </span>
         <br>
         <span>
-            <button id="InputField">Выбрать</button>
+            <button id="giveResult" onclick="giveResult()">Выбрать</button>
         </span>
         <br>
         <span>
@@ -27,4 +23,37 @@
         </span>
     </div>
 </body>
+<script>
+
+    let RandomNumber = Math.round(Math.random() * 99) + 1
+    const Nothink = "Введите число от 1 до 100"
+    document.getElementById('title').textContent = Nothink
+
+
+    function giveResult(){           
+        const Nums = parseInt(document.getElementById('SomeNum').value) 
+        const titleOutput = document.getElementById('title')
+        console.log(RandomNumber)
+
+        if(Nums === ''){
+            titleOutput.textContent = 'Введите число'
+            return
+        }else if(Nums < 0){
+            titleOutput.textContent = "Число не может быть меньше 0"
+            return
+        }
+
+        // проверка на то правильно ли число
+        if(Nums > RandomNumber){
+            titleOutput.innerHTML = "Загаданное число <b>меньше</b>"
+        }else if(Nums < RandomNumber){
+            titleOutput.innerHTML = "Загаданное число <b>больше</b>"
+        }else if(Nums === RandomNumber){
+            titleOutput.innerHTML = "<b>Вы угадали</b>"
+
+            RandomNumber = Math.round(Math.random() * 99) + 1
+        }
+    }  
+
+</script>
 </html>
