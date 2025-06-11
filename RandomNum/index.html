@@ -5,13 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рандомное значение</title>
 </head>
+<style>
+#mainBlock{
+    border-radius: 25px;
+    border: solid;
+    display: flex;
+    max-width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 35vh;
+    text-align: center;
+}
+#title{
+    font-size: 20px;
+
+}
+body{
+    background-color: rgb(22, 8, 71);
+    color: rgb(255, 255, 255);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+</style>
 <body>
-    <div>
+    <div id="mainBlock">
         <span>
         <h1>Отгадайте число</h1>
         </span>
         <span>
-            <input type="number" id="SomeNum" >
+            <input type="number" id="SomeNum"  maxlength="3" max="100" onkeydown="ClickOnField(event)">
         </span>
         <br>
         <span>
@@ -24,7 +49,6 @@
     </div>
 </body>
 <script>
-
     let RandomNumber = Math.round(Math.random() * 99) + 1
     const Nothink = "Введите число от 1 до 100"
     document.getElementById('title').textContent = Nothink
@@ -49,11 +73,16 @@
         }else if(Nums < RandomNumber){
             titleOutput.innerHTML = "Загаданное число <b>больше</b>"
         }else if(Nums === RandomNumber){
-            titleOutput.innerHTML = "<b>Вы угадали</b>"
+            titleOutput.innerHTML = "<b>Вы угадали!!!</b>"
 
             RandomNumber = Math.round(Math.random() * 99) + 1
         }
     }  
 
+    function ClickOnField(event){
+        if(event.key === "Enter"){
+            giveResult()
+        }
+    }
 </script>
 </html>
