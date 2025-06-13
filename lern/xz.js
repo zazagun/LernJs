@@ -185,7 +185,7 @@ function mutaithion(){
 
 
 //как избежать мутации через Object.assign
-function assign(){
+function Toassign(){
     const  person = {
     name: "Maik",
     age: 36
@@ -197,7 +197,7 @@ function assign(){
 
     console.log(person)
 }
-//assign()
+//Toassign()
 
 // как избежать мутации через оператор разделения объекта на свойства ... (spread)
 // ссылки на вложенные объекты сохраняются
@@ -230,6 +230,7 @@ function tripledot(){
 //tripledot()
 
 //избегание мутации путем конвертации в строку и  распарса 
+//вложенные ссылки все равно меняются
 function stroca(){
     
     const cabs = {
@@ -267,9 +268,40 @@ function reverseString(string){
 //reverseString("Some Body")
 
 
+function SredZnach(AllNums) {
+    const lengthOfMassiv = AllNums.length
+    let countOfIteretions = 0;
+    let sumOfNum = 0;
+
+    for (let i = 0; i < lengthOfMassiv; i++) {
+        if(typeof AllNums[i] === 'number' && !isNaN(AllNums[i])){
+            sumOfNum += AllNums[i];
+            countOfIteretions++;
+        }
+    }
+    if(countOfIteretions === 0) {
+        console.log(0);
+    }else{
+    const ResultOfFunction = sumOfNum / countOfIteretions;
+    console.log(parseFloat(ResultOfFunction));
+    }
+}
+// SredZnach(["name",9,5,5,true,3,1,"string",7,21,3,undefined]);
+
+
+function MaxNum(Nums){
+    let MaxValue = Nums[0]
+
+    for(i=0; i < Nums.length; i++){
+        if(Nums[i] > MaxValue){
+            MaxValue = Nums[i]
+        }
+    }
+    return console.log(MaxValue)
+}
+// MaxNum([10,5,21,14,42,5])
 
 
 
-
-//3.41.42
+//3.53.48
 //code.mu 1.6 
