@@ -151,7 +151,7 @@ function masiivchik(){
         masPlus.push(i)
         }
         
-        FullArray.push(masPlus )
+        FullArray.push(masPlus)
     }
     console.log(FullArray)
 }
@@ -268,6 +268,7 @@ function reverseString(string){
 //reverseString("Some Body")
 
 
+//среднее значение в массиве
 function SredZnach(AllNums) {
     const lengthOfMassiv = AllNums.length
     let countOfIteretions = 0;
@@ -289,6 +290,7 @@ function SredZnach(AllNums) {
 // SredZnach(["name",9,5,5,true,3,1,"string",7,21,3,undefined]);
 
 
+//Максимально значение в массиве
 function MaxNum(Nums){
     let MaxValue = Nums[0]
 
@@ -302,6 +304,43 @@ function MaxNum(Nums){
 // MaxNum([10,5,21,14,42,5])
 
 
+//сумма квадратов всех чисел в массиве
+function sumOfSqrnum(massivOfNum){
+    const lengthOfMassiv = massivOfNum.length
+    let sumOfSqr = 0
+
+    for(i=0; i < lengthOfMassiv; i++){
+        sumOfSqr += massivOfNum[i]**2 
+    }
+    return console.log(sumOfSqr)
+}
+//sumOfSqrnum([1,4,2,5,2,5])
+
+
+// сумма чисел больше 0 но меньше 10
+function sumTen(massivWithNum){
+    const lengthOfMassiv = massivWithNum.length
+    sum = 0 
+
+    for(i=0; i < lengthOfMassiv; i++){
+        if(massivWithNum[i] > 0 && massivWithNum[i] < 10){
+            sum += massivWithNum[i]
+        }
+    }
+    return console.log(sum)
+}
+// sumTen([1,5,2,6,10,33,23,1,6,32,10])
+
+
+//разбить строку на буквы в массиве
+function splitOnLetter(massivWord){
+    const results = String(massivWord).split('')
+    console.log(results)
+}
+// splitOnLetter(12345)
+
+
+
 
 //3.53.48
-//code.mu 1.6 
+//code.mu 1.7 №3
