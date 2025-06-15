@@ -126,7 +126,7 @@ function parsing(){
 //рандомный примитив из объета 
 function result(number){
 
-    const array = [1,2,15,massiv = {name: "js", let: "change"}, 'name', 14, false];
+    const array = [1,2,15,'name',14,false];
     const lengthArray = array.length
     const ArrayOfRandomobg = []    
 
