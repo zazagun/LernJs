@@ -151,7 +151,7 @@ function masiivchik(){
         masPlus.push(i)
         }
         
-        FullArray.push(masPlus )
+        FullArray.push(masPlus)
     }
     console.log(FullArray)
 }
@@ -185,7 +185,7 @@ function mutaithion(){
 
 
 //как избежать мутации через Object.assign
-function assign(){
+function Toassign(){
     const  person = {
     name: "Maik",
     age: 36
@@ -197,7 +197,7 @@ function assign(){
 
     console.log(person)
 }
-//assign()
+//Toassign()
 
 // как избежать мутации через оператор разделения объекта на свойства ... (spread)
 // ссылки на вложенные объекты сохраняются
@@ -230,6 +230,7 @@ function tripledot(){
 //tripledot()
 
 //избегание мутации путем конвертации в строку и  распарса 
+//вложенные ссылки все равно меняются
 function stroca(){
     
     const cabs = {
@@ -267,7 +268,95 @@ function reverseString(string){
 //reverseString("Some Body")
 
 
+//среднее значение в массиве
+function SredZnach(AllNums) {
+    const lengthOfMassiv = AllNums.length
+    let countOfIteretions = 0;
+    let sumOfNum = 0;
+
+    for (let i = 0; i < lengthOfMassiv; i++) {
+        if(typeof AllNums[i] === 'number' && !isNaN(AllNums[i])){
+            sumOfNum += AllNums[i];
+            countOfIteretions++;
+        }
+    }
+    if(countOfIteretions === 0) {
+        console.log(0);
+    }else{
+    const ResultOfFunction = sumOfNum / countOfIteretions;
+    console.log(parseFloat(ResultOfFunction));
+    }
+}
+// SredZnach(["name",9,5,5,true,3,1,"string",7,21,3,undefined]);
 
 
-//3.07.33
-//code.mu 1.6 
+//Максимально значение в массиве
+function MaxNum(Nums){
+    let MaxValue = Nums[0]
+
+    for(i=0; i < Nums.length; i++){
+        if(Nums[i] > MaxValue){
+            MaxValue = Nums[i]
+        }
+    }
+    return console.log(MaxValue)
+}
+// MaxNum([10,5,21,14,42,5])
+
+
+//сумма квадратов всех чисел в массиве
+function sumOfSqrnum(massivOfNum){
+    const lengthOfMassiv = massivOfNum.length
+    let sumOfSqr = 0
+
+    for(i=0; i < lengthOfMassiv; i++){
+        sumOfSqr += massivOfNum[i]**2 
+    }
+    return console.log(sumOfSqr)
+}
+//sumOfSqrnum([1,4,2,5,2,5])
+
+
+// сумма чисел больше 0 но меньше 10
+function sumTen(massivWithNum){
+    const lengthOfMassiv = massivWithNum.length
+    sum = 0 
+
+    for(i=0; i < lengthOfMassiv; i++){
+        if(massivWithNum[i] > 0 && massivWithNum[i] < 10){
+            sum += massivWithNum[i]
+        }
+    }
+    return console.log(sum)
+}
+// sumTen([1,5,2,6,10,33,23,1,6,32,10])
+
+
+//разбить строку на буквы в массиве
+function splitOnLetter(massivWord){
+    const results = String(massivWord).split('')
+    console.log(results)
+}
+// splitOnLetter(12345)
+
+
+//разница между function declaration и functiob expression
+//function declaration
+// SumToPlus(1,5)
+function SumToPlus(a,b){
+    console.log(a + b)
+}
+//function expression
+let FuncToPlus = function(a,b){
+    console.log(a + b)
+} 
+// FuncToPlus(5,3)
+//expression нельзя использовать до объявления
+
+
+
+
+
+
+//3.53.48
+//code.mu 1.7 №3

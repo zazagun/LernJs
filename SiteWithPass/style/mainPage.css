@@ -1,0 +1,33 @@
+body{
+    background-color: #163BF5;
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.choiceSome{
+    border-bottom: solid #a7c1ff;
+    background-color: #000098;
+    width: 100wh;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #d8e5ff;
+}
+.RanNum{
+    margin-left: 1px;
+    margin-top: -5px;
+    margin-left: 1%;
+    width: 100px;
+    display: flex;
+    text-align: center;
+}
+.photo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
