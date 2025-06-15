@@ -354,8 +354,16 @@ let FuncToPlus = function(a,b){
 //expression нельзя использовать до объявления
 
 
-
-
+//рандомное число 1 до 10
+let fullmas = []
+function randomNums(chars){
+    for(i=0; i<chars; i++){
+        let nums = Math.round(Math.random()*10)+1
+            fullmas.push(nums)
+    }
+    return console.log(fullmas)
+}
+randomNums(5)
 
 
 //3.53.48
