@@ -340,6 +340,22 @@ function splitOnLetter(massivWord){
 // splitOnLetter(12345)
 
 
+//разница между function declaration и functiob expression
+//function declaration
+// SumToPlus(1,5)
+function SumToPlus(a,b){
+    console.log(a + b)
+}
+//function expression
+let FuncToPlus = function(a,b){
+    console.log(a + b)
+} 
+// FuncToPlus(5,3)
+//expression нельзя использовать до объявления
+
+
+
+
 
 
 //3.53.48
