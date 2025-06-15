@@ -363,7 +363,44 @@ function randomNums(chars){
     }
     return console.log(fullmas)
 }
-randomNums(5)
+// randomNums(5)
+
+
+//удаление повторов
+const RepetElements = [1,2,2,3,4,4,5]
+function Deletrepet(arrays){
+    let Repeters = []
+    for(let i=0; i<RepetElements.length; i++){
+        if(RepetElements[i] === RepetElements[i-1]){
+            arrays.pop([i])
+            
+        }
+    }
+    console.log(RepetElements)
+}
+// Deletrepet(RepetElements)
+
+
+function removeDuplicates(arr) {
+    let uniqueArray = [];
+
+    for (let i = 0; i < arr.length; i++) {
+        let isUnique = true;
+
+        for (let j = 0; j < uniqueArray.length; j++) {     //проверка на наличие в уже существующем списке
+            if (arr[i] === uniqueArray[j]) {
+                isUnique = false;
+                break;
+            }else if(isUnique){
+                uniqueArray.push(arr[i]); //добавление элемента
+            }
+        }
+    }
+    return uniqueArray;
+}
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5, 2 , 1, 1])); 
+
+
 
 
 //3.53.48
