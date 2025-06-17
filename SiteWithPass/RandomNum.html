@@ -11,6 +11,7 @@
     border: solid;
     display: flex;
     max-width: 50vw;
+    min-width: 160px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -22,7 +23,6 @@
 }
 #title{
     font-size: 20px;
-
 }
 body{
     background-color: rgb(47, 13, 170);
@@ -30,12 +30,26 @@ body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#TableWithResult{
+.BlockWithRes{
     position: absolute;
-    padding: 0px;
+    top: 10px;
+    width: 165px;
+    min-height: 140px;
+    border: solid 1.5px;
+    border-radius: 11px;
+    text-align: center;
 }
-
 </style>
+
+<body>
+    <div class="BlockWithRes">
+    <table id="TableWithResult">
+        <!--тут создаются строки с правильными ответами-->
+        <p>Отгаданные числа</p>
+    </table> 
+    </div>
+   
+</body>
 
 <body>
     <div id="mainBlock">
@@ -56,14 +70,6 @@ body{
     </div>
 </body>
 
-<body>
-    <table id="TableWithResult">
-        
-        <ul>wdwd</ul>
-        <ul>dwwdw</ul>
-    </table>    
-</body>
-
 <script>
     let RandomNumber = Math.round(Math.random() * 99) + 1
     const Nothink = "Введите число от 1 до 100"
@@ -73,14 +79,19 @@ body{
         console.log("Вы отгадали число " + RandomNumber)
 
         function NewTable(){
-            document.createElement('ul').textContent = "Отгаданное число: " + RandomNumber
-        } 
-        
-        // дописать функцию которая будет заносить правильные ответы в таблицу
+            const table = document.getElementById('TableWithResult');
+            const cell = table.insertRow().insertCell();
+
+            cell.textContent = `Отгаданно число: ${RandomNumber}`;         
+        }
+        NewTable()
 
         RandomNumber = Math.round(Math.random() *99) + 1
     }
 
+    function DontRightAnswer(){
+        document.getElementById("mainBlock").style.backgroundColor = "rgb(193, 76, 76)"
+    }
 
     function giveResult(){           
         const Nums = parseInt(document.getElementById('SomeNum').value) 
@@ -90,17 +101,22 @@ body{
             titleOutput.textContent = 'Введите число'
             return
         }else if(Nums < 0){
+            document.getElementById("mainBlock").style.backgroundColor = "rgb(171, 47, 140)"
             titleOutput.textContent = "Число не может быть меньше 0"
             return  
+        }else if(Nums > 100){
+            document.getElementById("mainBlock").style.backgroundColor = "rgb(171, 47, 140)"
+            titleOutput.textContent = "Число не может быть болшье 100"
+            return
         }
 
         // проверка на то правильно ли число
         if(Nums > RandomNumber){
             titleOutput.innerHTML = "Загаданное число <b>меньше</b>"
-            document.getElementById("mainBlock").style.backgroundColor = "rgb(193, 76, 76)" 
+            DontRightAnswer() 
         }else if(Nums < RandomNumber){
             titleOutput.innerHTML = "Загаданное число <b>больше</b>"
-            document.getElementById("mainBlock").style.backgroundColor = "rgb(193, 76, 76)"
+            DontRightAnswer()
         }else if(Nums === RandomNumber){
             titleOutput.innerHTML = "<b>Вы угадали!!!</b>"
             document.getElementById("mainBlock").style.backgroundColor = "rgb(75, 177, 75)"
@@ -116,44 +132,4 @@ body{
     }
 </script>
 
-</html>
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Динамическая таблица с UL</title>
-</head>
-<body>
-    <button id="addButton">Добавить UL</button>
-    <table id="myTable">
-    </table>
-
-    <script>
-        let counter = 1;
-        const addButton = document.getElementById('addButton');
-        const table = document.getElementById('myTable');
-
-        addButton.addEventListener('click', () => {
-            // Создаем новый UL
-            const ul = document.createElement('ul');
-
-            // Добавляем элемент LI с текстом и счетчиком
-            const li = document.createElement('li');
-            li.textContent = `Увеличено: ${counter}`;
-            ul.appendChild(li);
-
-            // Создаем новую строку таблицы
-            const row = table.insertRow();
-            const cell = row.insertCell();
-
-            // Добавляем UL в ячейку таблицы
-            cell.appendChild(ul);
-
-            counter++;
-        });
-    </script>
-</body>
 </html>
