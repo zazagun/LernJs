@@ -31,6 +31,14 @@ body{
 }
 </style>
 <body>
+    <table id="TableWithResult">
+        
+        <ul>wdwd</ul>
+        <ul>dwwdw</ul>
+    </table>    
+</body>
+
+<body>
     <div id="mainBlock">
         <span>
         <h1>Отгадайте число</h1>
@@ -48,37 +56,49 @@ body{
         </span>
     </div>
 </body>
+
 <script>
     let RandomNumber = Math.round(Math.random() * 99) + 1
     const Nothink = "Введите число от 1 до 100"
     document.getElementById('title').textContent = Nothink
 
+    function AcceptedNumAndGetNew(){
+        console.log("Вы отгадали число " + RandomNumber)
+
+        // function NewTable(){
+        //     document.createElement('liul').
+        // } дописать функцию которая будет заносить правильные ответы в таблицу
+
+        RandomNumber = Math.round(Math.random() *99) + 1
+    }
+
 
     function giveResult(){           
         const Nums = parseInt(document.getElementById('SomeNum').value) 
         const titleOutput = document.getElementById('title')
-        console.log(RandomNumber)
 
         if(Nums === ''){
             titleOutput.textContent = 'Введите число'
             return
         }else if(Nums < 0){
             titleOutput.textContent = "Число не может быть меньше 0"
-            return
+            return  
         }
 
         // проверка на то правильно ли число
         if(Nums > RandomNumber){
             titleOutput.innerHTML = "Загаданное число <b>меньше</b>"
+            document.getElementById("mainBlock").style.backgroundColor = "rgb(193, 76, 76)" 
         }else if(Nums < RandomNumber){
             titleOutput.innerHTML = "Загаданное число <b>больше</b>"
+            document.getElementById("mainBlock").style.backgroundColor = "rgb(193, 76, 76)"
         }else if(Nums === RandomNumber){
             titleOutput.innerHTML = "<b>Вы угадали!!!</b>"
+            document.getElementById("mainBlock").style.backgroundColor = "rgb(75, 177, 75)"
 
-            RandomNumber = Math.round(Math.random() * 99) + 1
+            AcceptedNumAndGetNew()
         }
     }  
-    //дописать смену цвета если введено не правильное число
 
     function ClickOnField(event){
         if(event.key === "Enter"){
@@ -86,4 +106,5 @@ body{
         }
     }
 </script>
+
 </html>
