@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <link rel="stylesheet" href="./style/body.css">
+
+
+    <script>
+    function sum(){
+        let num1 = Number(document.getElementById('fierst_num').value)
+        let num2 = Number(document.getElementById('second_num').value)
+
+        let result = num1 + num2;
+
+        document.getElementById("result").innerHTML = result
+    }
+    </script>
+</head>
+
+<body>
+    <div class="sqare">
+        <input id="fierst_num" type="text">
+        <p class="plus">+</p>
+        <input id="second_num" type="twxt">
+        <button id="ravno" onclick="sum()">=</button>
+
+        <p id="result"></p>
+    </div>
+</body>
+
+
+
+</html>
