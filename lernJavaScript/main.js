@@ -392,7 +392,7 @@ function Deletrepet(arrays){
 function withOutRepet(arr){
     return [...new Set(arr)];
 }
-// console.log(withOutRepet([1,2,3,5,4,4,3,2]));
+// console.log(withOutRepet(RepetElements));
 
 
 
