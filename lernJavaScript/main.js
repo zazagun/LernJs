@@ -369,36 +369,31 @@ function randomNums(chars){
 //удаление повторов
 const RepetElements = [1,2,2,3,4,4,5]
 function Deletrepet(arrays){
-    let Repeters = []
+    let unickRepeters = []
+    
     for(let i=0; i<RepetElements.length; i++){
-        if(RepetElements[i] === RepetElements[i-1]){
-            arrays.pop([i])
-            
-        }
-    }
-    console.log(RepetElements)
-}
-// Deletrepet(RepetElements)
+        let isU = true
 
+        for(let m=0; m<unickRepeters.length; m++){
 
-function removeDuplicates(arr) {
-    let uniqueArray = [];
-
-    for (let i = 0; i < arr.length; i++) {
-        let isUnique = true;
-
-        for (let j = 0; j < uniqueArray.length; j++) {     //проверка на наличие в уже существующем списке
-            if (arr[i] === uniqueArray[j]) {
-                isUnique = false;
-                break;
-            }else if(isUnique){
-                uniqueArray.push(arr[i]); //добавление элемента
+            if(arrays[i] === unickRepeters[m]){
+                isU = false
+                break
             }
         }
+        if(isU){
+                unickRepeters.push(arrays[i])
+        }
     }
-    return uniqueArray;
+    return unickRepeters
 }
-console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5, 2 , 1, 1])); 
+// console.log(Deletrepet(RepetElements))
+
+function withOutRepet(arr){
+    return [...new Set(arr)];
+}
+// console.log(withOutRepet([1,2,3,5,4,4,3,2]));
+
 
 
 
