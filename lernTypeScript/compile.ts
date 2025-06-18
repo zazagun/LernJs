@@ -13,3 +13,5 @@ const func = (num: number): void => {
     console.log(num);
 };
 func(12)
+
+console.log("pisia")
