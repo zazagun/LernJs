@@ -14,4 +14,3 @@ const func = (num: number): void => {
 };
 func(12)
 
-console.log("pisia")
