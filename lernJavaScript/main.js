@@ -371,7 +371,7 @@ const RepetElements = [1,2,2,3,4,4,5]
 function Deletrepet(arrays){
     let unickRepeters = []
     
-    for(let i=0; i<RepetElements.length; i++){
+    for(leti=0; i<arrays.length; i++){
         let isU = true
 
         for(let m=0; m<unickRepeters.length; m++){
@@ -396,7 +396,7 @@ function withOutRepet(arr){
 
 
 
-
+console.log("penis_denisa_otvalila")
 
 //3.53.48
 //code.mu 1.7 №3
