@@ -396,7 +396,7 @@ function withOutRepet(arr){
 
 
 
-console.log("penis_denisa_otvalila")
+
 
 //3.53.48
 //code.mu 1.7 №3
