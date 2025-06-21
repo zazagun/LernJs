@@ -8,8 +8,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
-    "dev": "tsc",
-    "start": "node dist/compile.js"
+    "dev": "tsc"
   },
   "keywords": [],
   "author": "",
