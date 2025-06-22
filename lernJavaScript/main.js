@@ -402,6 +402,31 @@ let PlusNum = 3 >> 1 //делает число меньше делает чсл�
 // console.log(MinusNum, PlusNum)
 
 
+//перевод из 2-ичной системы в 10-ную
+function ToTenFromTwo(binaryNum) {
+    let binaryString = binaryNum.toString()
+    let resultOfFunc = 0
+
+    for (let i = 0; i < binaryString.length; i++) {
+
+        let digit = parseInt(binaryString[i], 10)
+        let position = binaryString.length - 1 - i
+
+        if (digit < 2) {
+            resultOfFunc += digit * 2 ** position
+        }else if(digit >= 2){
+            console.log("Как минимум одно из чисел более 1")
+            return NaN
+        }
+         else {
+            console.log("Некорректное двоичное число");
+            return NaN
+        }
+    }
+    return resultOfFunc
+}
+// console.log(ToTenFromTwo(1001101))
+
 
 
 
