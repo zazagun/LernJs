@@ -107,6 +107,7 @@ let path = function(score){
         console.log("penis")
     }
 }
+const { isNamespaceExport } = require("typescript");
 //path(12)
 
 
@@ -393,6 +394,12 @@ function withOutRepet(arr){
     return [...new Set(arr)];
 }
 // console.log(withOutRepet(RepetElements));
+
+
+//пример побитового сдвига
+let MinusNum = 3 << 1 //делает число болшше из 11 в 111
+let PlusNum = 3 >> 1 //делает число меньше делает чсло из 11 в 1
+// console.log(MinusNum, PlusNum)
 
 
 
