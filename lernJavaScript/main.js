@@ -428,7 +428,23 @@ function ToTenFromTwo(binaryNum) {
 // console.log(ToTenFromTwo(1001101))
 
 
+//перевод из 10 системы счисления в двоичную
+function toBynary(num){
+    if(num === 0){
+        return 0
+    }
+    let bynaryDigits = []
+
+    while(num > 0){
+        let remind = num % 2
+        bynaryDigits.unshift(remind)
+        num = Math.floor(num / 2)
+    }
+    return bynaryDigits.join('')
+}
+// console.log(toBynary(25))
 
 
-//3.53.48
+
+//4.12.00
 //code.mu 1.7 №3
