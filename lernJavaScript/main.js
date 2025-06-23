@@ -430,19 +430,32 @@ function ToTenFromTwo(binaryNum) {
 
 //перевод из 10 системы счисления в двоичную
 function toBynary(num){
+    let bynaryDigits = []
+
     if(num === 0){
         return 0
     }
-    let bynaryDigits = []
+    const CopyOfNum = num
 
-    while(num > 0){
-        let remind = num % 2
-        bynaryDigits.push(remind) //можно через unshift(remind)
-        num = Math.floor(num / 2)
+    let UnaryPlusOfNum = Math.abs(num)
+
+    if(num > 0 || num < 0){
+        while(UnaryPlusOfNum > 0){
+            let remind = UnaryPlusOfNum % 2
+            bynaryDigits.unshift(remind) //можно через unshift(remind)
+            UnaryPlusOfNum = Math.floor(UnaryPlusOfNum / 2)
+        }
+        if(CopyOfNum < 0){
+            bynaryDigits.unshift("-")
+        }
     }
-    return bynaryDigits.reverse().join('')
+    return bynaryDigits.join('')
 }
-console.log(toBynary(10))
+console.log(toBynary(-10))
+
+
+//написать задачку на стек и скобочки, так же видос по гиту 
+
 
 
 
