@@ -459,5 +459,7 @@ console.log(toBynary(-10))
 
 
 
+
+
 //4.12.00
 //code.mu 1.7 №3
