@@ -437,12 +437,12 @@ function toBynary(num){
 
     while(num > 0){
         let remind = num % 2
-        bynaryDigits.unshift(remind)
+        bynaryDigits.push(remind) //можно через unshift(remind)
         num = Math.floor(num / 2)
     }
-    return bynaryDigits.join('')
+    return bynaryDigits.reverse().join('')
 }
-// console.log(toBynary(25))
+console.log(toBynary(10))
 
 
 
