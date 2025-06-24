@@ -451,11 +451,55 @@ function toBynary(num){
     }
     return bynaryDigits.join('')
 }
-console.log(toBynary(-10))
+// console.log(toBynary(-10))
 
 
 //написать задачку на стек и скобочки, так же видос по гиту 
+let exesise = ('(((()22)))')
+function Scobki(arr){
+    let masRight = []
+    let masLeft = []
+    let result = false 
 
+    for(let item of arr){
+        if(item === "("){
+            masLeft.push(item)
+        }else if(item === ")"){
+            masRight.push(item)
+        }else{
+            result = "Используйте только ( и )"
+            return result
+        }
+    }
+    if(masLeft.length === masRight.length){
+        result = true
+    }else{
+        result = false
+    }
+    return result
+}
+console.log(Scobki(exesise))
+//второе решение
+function Scobki_two(arr){
+    let massOfResult = []
+
+    for(let item of arr){
+        if(item === "("){
+            massOfResult.push(item)
+        }else if(item === ")"){
+            massOfResult.pop()
+        }else{
+            massOfResult = "Use only ( and )"
+            return massOfResult
+        }
+    }
+    if(massOfResult.length === 0){
+        massOfResult = true
+        return massOfResult
+    }
+    return massOfResult
+}
+// console.log(Scobki_two(exesise))
 
 
 
