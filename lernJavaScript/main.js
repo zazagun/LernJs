@@ -454,8 +454,8 @@ function toBynary(num){
 // console.log(toBynary(-10))
 
 
-//написать задачку на стек и скобочки, так же видос по гиту 
-let exesise = ('(((()22)))')
+//Задача по скобкам более универсальнон решение
+let exersise = (')))(((')
 function Scobki(arr){
     let masRight = []
     let masLeft = []
@@ -467,7 +467,7 @@ function Scobki(arr){
         }else if(item === ")"){
             masRight.push(item)
         }else{
-            result = "Используйте только ( и )"
+            result = "Unexpected symbol: " + item
             return result
         }
     }
@@ -478,8 +478,9 @@ function Scobki(arr){
     }
     return result
 }
-console.log(Scobki(exesise))
-//второе решение
+// console.log(Scobki(exersise))
+//второе решение менее правильно 
+const exersise2 = "(())()"
 function Scobki_two(arr){
     let massOfResult = []
 
@@ -487,23 +488,33 @@ function Scobki_two(arr){
         if(item === "("){
             massOfResult.push(item)
         }else if(item === ")"){
-            massOfResult.pop()
+            let midleRes = massOfResult.pop()
+            if(midleRes === undefined){
+                massOfResult = false
+                return massOfResult
+            }
         }else{
-            massOfResult = "Use only ( and )"
+            massOfResult = "Unexpected symbol: " + item
             return massOfResult
         }
     }
     if(massOfResult.length === 0){
         massOfResult = true
         return massOfResult
+    }else if(massOfResult.length !== 0){
+        massOfResult = false
+        return massOfResult
     }
     return massOfResult
 }
-// console.log(Scobki_two(exesise))
+// console.log(Scobki_two(exersise2)) 
 
 
 
 
 
+
+
+// видос по гиту 
 //4.12.00
 //code.mu 1.7 №3
