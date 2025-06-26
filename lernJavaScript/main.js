@@ -529,6 +529,39 @@ function findIndex(arr, find){
 // console.log(findIndex(mas, 2))
 
 
+//Фильтрация массива, возвращение только четных чисел 
+function onlyEven(arr){
+    let result = []
+    for(i=0; i<arr.length; i++){
+        if(arr[i]%2 === 0){
+            result.push(arr[i])
+        }
+    }
+    return result
+}
+// console.log(onlyEven([1,2,3,4,5,6,7,8,9,10,11,12]))
+
+
+//подсчет гласных в строке
+function countVowels(str) {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    let count = 0;
+
+    for (let char of str) {
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+    return count;
+}
+// console.log(countVowels("Hello World"));
+
+
+//Палиндром(строка читает одинаково с обоих сторон)
+function polindrom(string){
+
+}
+
 
 
 
