@@ -510,10 +510,11 @@ function Scobki_two(arr){
 // console.log(Scobki_two(exersise2)) 
 
 
-
+//поиск индекса у искомого
 let mas = [1,6,4,3,2,1,4]
 function findIndex(arr, find){
     let result
+    
     for(let i=0; i <arr.length; i++){
         if(typeof arr[i] === 'number'){
             if(arr[i] === find){
@@ -525,7 +526,12 @@ function findIndex(arr, find){
     result = "Число: " + find + " не найдено"
     return result
 }
-console.log(findIndex(mas, 2))
+// console.log(findIndex(mas, 2))
+
+
+
+
+
 
 
 // видос по гиту 
