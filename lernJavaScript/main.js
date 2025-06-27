@@ -560,8 +560,21 @@ function countVowels(str) {
 //Палиндром(строка читает одинаково с обоих сторон)
 function polindrom(string){
 
-}
+    const LowerString = string.toLowerCase()
+    const lengthOfStr = LowerString.length
+    let result = "Эта полиндром"
 
+    for(let i=0; i<lengthOfStr/2; i++){
+        if(LowerString[i] !== LowerString[lengthOfStr -1 -i]){
+            return "Это не полиндром"
+        }
+    }
+    return result
+}
+// console.log(polindrom("Мадам"))
+
+
+//
 
 
 
