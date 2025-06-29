@@ -574,12 +574,33 @@ function polindrom(string){
 // console.log(polindrom("Мадам"))
 
 
-//
+//объеденение двух объектов в один 
+function joinObg(){
+    const Obj_One = {
+        name:"Max",
+        secName:"Mad"
+    }
+    const Obj_Two ={
+        age: 25,
+        work: true
+    }
+
+    const resultObject = Object.assign({}, Obj_One, Obj_Two)
+    //так же можно через spread 
+    const exempleObject = {
+        ... Obj_One,
+        ...Obj_Two
+    }
+
+    return resultObject
+}
+// console.log(joinObg())
 
 
 
 
 
-// видос по гиту 
+
+// видос по гиту 34.09
 //4.12.00
 //code.mu 1.7 №3
