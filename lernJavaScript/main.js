@@ -602,10 +602,14 @@ function round(mas){
 
 
 
+let respons = (a,b) => {
+    return a+b
+}
+respons(1,5)
+//разбор стрелочных функций
 
 
 
 
-
-//4.45.50
+//4.47.50
 //code.mu 1.9 №1
