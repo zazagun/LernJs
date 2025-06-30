@@ -55,18 +55,6 @@ function lastChar(char){
 //lastChar("hello wot")
 
 
-//изменение примитива в константе
-const objConst = {
-  item: "foo",
-};
-let objLet = {
-  item: "bar",
-};
-objConst.item = "bar";
-objLet.item = "foo";
-//console.log(objConst, objLet);
-
-
 //вывод отсутствующих значений
 function arrayDiff(a, b) {
     return a.filter(item => !b.includes(item))
@@ -101,16 +89,6 @@ function evenOrNot(num){
 //console.log(evenOrNot(7))
 
 
-//итерации через параметр
-let path = function(score){
-    for(; score > 0; score--){
-        console.log("penis")
-    }
-}
-const { isNamespaceExport } = require("typescript");
-//path(12)
-
-
 //парс и распарс JSON объекта
 const JsonObgectFile = require("./main.json")
 
@@ -125,7 +103,7 @@ function parsing(){
 
 
 //рандомный примитив из объета 
-function result(number){
+function randomObj(number){
 
     const array = [1,2,15,'name',14,false];
     const lengthArray = array.length
@@ -137,7 +115,7 @@ function result(number){
     }
     console.log(ArrayOfRandomobg)
 }
-// result(5)
+// randomObj(5)
 
 
 //Создание вложенных массивов с пересчетом
@@ -545,13 +523,13 @@ function findIndex(arr, find){
 function onlyEven(arr){
     let result = []
     for(i=0; i<arr.length; i++){
-        if(arr[i]%2 === 0){
+        if(arr[i]%2 === 0 && typeof(arr[i]) === "number"){
             result.push(arr[i])
         }
     }
     return result
 }
-// console.log(onlyEven([1,2,3,4,5,6,7,8,9,10,11,12]))
+// console.log(onlyEven([1,2,1,7,6,8,9,11,12,"2"]))
 
 
 //подсчет гласных в строке
@@ -609,9 +587,25 @@ function joinObg(){
 // console.log(joinObg())
 
 
+//округление до одного знака после запятой
+function round(mas){
+    let newMas = []
+
+    for(i=0; i<mas.length; i++){
+        // let midleRes = Math.round(mas[i] *10) /10
+        let midleRes = parseFloat(mas[i].toFixed(1))
+        newMas.push(midleRes)
+    }   
+    return newMas
+}
+// console.log(round([1.456, 2.125, 3.32, 4.1, 5.34]))
+
+
+
+
 
 
 
 
 //4.45.50
-//code.mu 1.7 №3
+//code.mu 1.9 №1
