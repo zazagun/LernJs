@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function giveResp(){
+        let name = document.getElementById("inputField").value
+        if(name !== ""){
+            let respons = "Привет " + `${name}`
+            document.getElementById("result").textContent = respons
+        }else{
+            document.getElementById("result").textContent = ""
+        }
+    }
+</script>
+<style>
+    form{
+        display: block;
+        position: absolute;
+        margin-left: 40%;
+        text-align: center ;
+    }
+</style>
+<body>
+    <form>
+    <label>Введите имя</label>
+    <div>
+        <input id="inputField" type="text">
+    </div>
+    <div>
+        <button type="button" onclick="giveResp()">Подтвердить</button>
+    </div>
+    <div>
+        <p id="result"></p>
+    </div>
+    </form>
+</body>
+</html>

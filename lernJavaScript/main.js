@@ -367,6 +367,18 @@ function randomNums(chars){
 // randomNums(5)
 
 
+//факториал числа
+function factorial(n) {
+    if (n === 0) {
+        return 1
+    } else {
+        return n * factorial(n - 1)
+    }
+}
+
+// console.log(factorial(4)) 
+
+
 //удаление повторов
 const RepetElements = [1,2,2,3,4,4,5]
 function Deletrepet(arrays){
@@ -601,6 +613,5 @@ function joinObg(){
 
 
 
-// видос по гиту 34.09
-//4.12.00
+//4.45.50
 //code.mu 1.7 №3
