@@ -576,7 +576,7 @@ function joinObg(){
     }
 
     const resultObject = Object.assign({}, Obj_One, Obj_Two)
-    //так же можно через spread 
+    //так же можно через spread (...)
     const exempleObject = {
         ... Obj_One,
         ...Obj_Two
@@ -601,26 +601,42 @@ function round(mas){
 // console.log(round([1.456, 2.125, 3.32, 4.1, 5.34]))
 
 
-
-let respons = (a,b) => {
-    return a+b
+//обработка пользовательской ошибки
+function Err(){
+    function notE(a){
+        if(a.toLowerCase() === "e"){
+            throw Error("НЕ ВВОДИ БЛЯ Е")
+        }else{
+            return true
+        }
+    }
+    try{
+        let result = notE("e")
+        console.log(result)
+    }catch (e){
+        console.error(e.message)
+    }
+    console.log("код продолжает работать дальше....")
 }
-respons(1,5)
-//разбор стрелочных функций
-
-const newPost = (post, addedAt = Date()) => ({
-    ...post,
-    addedAt,
-});
-
-const firstPost = {
-    id: 1,
-    author: 'Bogdan',
-};
-
-newPost(firstPost);
+// Err()
+function TryCath(){
+    try{
+        const n = 10
+        n = 2
+    }catch (e){ // перменная e получает в себя саму ошибку
+        console.log(e.message)
+    }
+}
+// TryCath()
 
 
 
-//4.47.50
+
+
+
+
+
+
+
+//5.15.45
 //code.mu 1.9 №1
