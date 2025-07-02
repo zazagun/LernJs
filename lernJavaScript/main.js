@@ -608,6 +608,17 @@ let respons = (a,b) => {
 respons(1,5)
 //разбор стрелочных функций
 
+const newPost = (post, addedAt = Date()) => ({
+    ...post,
+    addedAt,
+});
+
+const firstPost = {
+    id: 1,
+    author: 'Bogdan',
+};
+
+newPost(firstPost);
 
 
 
