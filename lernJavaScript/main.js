@@ -630,13 +630,31 @@ function TryCath(){
 // TryCath()
 
 
+//проверка на то, одинаковые ли массивы
+const ArrayForCheck = [1,2,3]
+const ArrayForCheck2 = new Array(1,2,3)
+function ravnoOrNo(a,b){
+
+    let result = true
+
+    if(a.length === b.length){
+        for(i=0; i<a.length; i++){
+            if(a[i] === b[i]){
+                break
+            }else{
+                return false
+            }
+        }
+    }else{
+        return false
+    }
+    return result
+}
+// console.log(ravnoOrNo(ArrayForCheck, ArrayForCheck2))
 
 
 
 
 
-
-
-
-//5.15.45
+//5.38.40
 //code.mu 1.9 №1
