@@ -621,12 +621,14 @@ function Err(){
 // Err()
 function TryCath(){
     try{
-        const n = 10
-        n = 2
+        let obj = "это не JSON"
+        let result = JSON.parse(obj)
     }catch (e){ // перменная e получает в себя саму ошибку
-        console.log(e.message)
         console.log(e.name)
-        console.log(e.stack)
+        console.log(e.message)
+        // console.log(e.stack)
+    }finally{
+        console.log("finaly выполнится в бом случае")
     }
 }
 // TryCath()
@@ -655,8 +657,24 @@ function ravnoOrNo(a,b){
 // console.log(ravnoOrNo(ArrayForCheck, ArrayForCheck2))
 
 
+const Slianie = ()=>{
+    let One = (word) =>{
+        return word ?? "Это значение по умолчению"//это оператор нулевого слияния ??
+        }//тут вернется правое значение т.к. левое либо null или undefiend
+    console.log(One(null))
+
+    let Two = (word)=>{
+        word ??= "Это значение по умолчению"
+        return word //оператор присваивания с нулевым значением ??=
+    }
+    console.log(Two())
+}
+// Slianie()
 
 
 
-//5.52.30
+
+
+
+//5.52.16
 //code.mu 1.9 №1
