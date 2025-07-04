@@ -625,6 +625,8 @@ function TryCath(){
         n = 2
     }catch (e){ // перменная e получает в себя саму ошибку
         console.log(e.message)
+        console.log(e.name)
+        console.log(e.stack)
     }
 }
 // TryCath()
@@ -656,5 +658,5 @@ function ravnoOrNo(a,b){
 
 
 
-//5.38.40
+//5.52.30
 //code.mu 1.9 №1
