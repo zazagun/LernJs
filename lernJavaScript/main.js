@@ -22,6 +22,13 @@ function Broze(){
 //Broze()
 
 
+//вызов анонимной функции
+(function(x){
+    console.log(x)
+})
+// (5)//для вызова написать скобки и если надо передать параметр
+
+
 //изменение типа значения на str
 const changeMassiv = function(){
     let mas = JSON.stringify({ hello: undefined, test: 1 }, (key, value) => {
@@ -657,6 +664,7 @@ function ravnoOrNo(a,b){
 // console.log(ravnoOrNo(ArrayForCheck, ArrayForCheck2))
 
 
+// операторы ?? и ??=
 const Slianie = ()=>{
     let One = (word) =>{
         return word ?? "Это значение по умолчению"//это оператор нулевого слияния ??
@@ -672,9 +680,43 @@ const Slianie = ()=>{
 // Slianie()
 
 
+//поиск .dom & http://
+function findDomain(){
+    const DomainMassiv = [
+    "http//pisia.com",
+    "ligaOfpidors",
+    "http//govno.ru",
+    "http//smotru.ru",
+    "piski.ru"
+    ];
+
+    let massWithWithHttp = []
+    let massWithDotCom = []
+
+    function returnFilter(){
+        const filteredArrayHttp = DomainMassiv.filter(url => url.startsWith("http//"))
+        massWithWithHttp.push(filteredArrayHttp)
+
+        const filteredDotCom = DomainMassiv.filter(dot => dot.endsWith(".com"))
+        massWithDotCom.push(filteredDotCom)
+
+        absolut = []
+        absolut.push("массив с .com: " + filteredDotCom,
+            "массив с http: " + filteredArrayHttp)
+
+        return absolut
+
+    }
+    console.log(returnFilter())}
+// findDomain()
+
+
+
+
+
 
 
 
 
 //5.52.16
-//code.mu 1.9 №1
+//code.mu 1.10 №3
