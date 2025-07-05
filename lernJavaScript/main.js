@@ -711,9 +711,22 @@ function findDomain(){
 // findDomain()
 
 
+//map и forEach
+let Fn = ()=>{
+    let m = [1,2,3,4]
+
+    const newArr = m.map((elem)=>{//создает полностью новый массив добавляя 
+        return `Эот число ${elem}`//значения в один и тот же массив
+    })
+    console.log(newArr)
 
 
-
+    //forEach ничего не возвращает
+    m.forEach((elem, index, array)=> { //сам елмент, индекс в масс, массив целиком
+        console.log(`Это число ${elem}`)
+    })
+}
+Fn()
 
 
 
