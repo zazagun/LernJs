@@ -732,8 +732,12 @@ let Fn = ()=>{
 //использование filter в массивах js 
 const MasWithNum = [5, 12, 8, 130, 44, 7];
 const filterFunc = (masNums, index, array)=>{
-    let respons = masNums.filter(num => num > 10)
-    return respons
+    let respons = masNums.filter(num => num > 10 && num < 100)
+    //каждое число умножается на 10
+    let midle = respons.map(num => {
+        return num * 10
+    })
+    return midle
 }
 // console.log(filterFunc(MasWithNum))
 
