@@ -337,6 +337,11 @@ let FuncToPlus = function(a,b){
     console.log(a + b)
 } 
 // FuncToPlus(5,3)
+//или
+let Func = (a,b)=>{
+    console.log(a+b)
+}
+// Func(5,2)
 //expression нельзя использовать до объявления
 
 
