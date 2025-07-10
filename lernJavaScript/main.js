@@ -574,6 +574,17 @@ function polindrom(string){
     return result
 }
 // console.log(polindrom("Мадам"))
+function polindromTwo(string){
+    const toLow = string.toLowerCase()
+    const reversStr = toLow.split("").reverse().join('')
+    let result = false
+
+    if(toLow === reversStr){
+        result = true
+    }
+    return result
+}
+// console.log(polindromTwo("МаДАм"))
 
 
 //объеденение двух объектов в один 
@@ -752,5 +763,7 @@ const filterFunc = (masNums, index, array)=>{
 
 
 
-//5.57.45
+
+
+//6.01.55
 //code.mu 1.10 №3
