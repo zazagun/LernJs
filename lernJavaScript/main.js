@@ -69,10 +69,10 @@ function arrayDiff(a, b) {
 //console.log(arrayDiff([1, 2], [1]))
 function array_diff(a, b) {
 
-    let arr = new Array();
+    let arr = new Array()
     for(let i = 0; i < a.length; i++){
         if(b.indexOf(a[i])<0){
-            arr.push(a[i]);
+            arr.push(a[i])
         }
     }
   
@@ -365,7 +365,6 @@ function factorial(n) {
         return n * factorial(n - 1)
     }
 }
-
 // console.log(factorial(4)) 
 
 
@@ -728,7 +727,7 @@ function findDomain(){
 
 
 //map и forEach
-let Fn = ()=>{
+let forEachiMap = ()=>{
     let m = [1,2,3,4]
 
     const newArr = m.map((elem)=>{//создает полностью новый массив добавляя 
@@ -742,7 +741,7 @@ let Fn = ()=>{
         console.log(`Это число ${elem}`)
     })
 }
-// Fn()
+// forEachiMap()
 
 
 //использование filter в массивах js 
@@ -771,5 +770,6 @@ const TernOper = ()=>{
 
 
 
-//6.05.22
+
+//6.20.00
 //code.mu 1.10 №3
