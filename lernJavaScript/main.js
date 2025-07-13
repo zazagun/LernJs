@@ -758,12 +758,18 @@ const filterFunc = (masNums, index, array)=>{
 // console.log(filterFunc(MasWithNum))
 
 
+//теранырный оператор ?
+const TernOper = ()=>{
+    let x = 10
+    let y = 5
+    x > y ? console.log("x больше y") : console.log("y больше x")
+}
+// TernOper()
 
 
 
 
 
 
-
-//6.01.55
+//6.05.22
 //code.mu 1.10 №3
