@@ -766,10 +766,37 @@ const TernOper = ()=>{
 // TernOper()
 
 
+//деструктуризация для доставания свойств
+const Destruct = (obg)=>{
+    const DestauctObj = {
+        name: "Max",
+        secName: "Dilashow",
+        age: 21
+    }
+
+    const {name, secName, age} = DestauctObj
+
+    console.log(`his name ${name} i last name ${secName}`)
+
+    if(age < 50){
+        console.log(age)
+    }
+}
+// Destruct()
+
+
+//число фибоначи
+function fibonachi(num){
+    if(num <= 1){
+        return num
+    }else{
+        return fibonachi(num - 1) + fibonachi(num - 2)
+    }
+}
+// console.log(`Результат: ${fibonachi(3)}`)
 
 
 
 
-
-//6.20.00
+//6.34.00
 //code.mu 1.10 №3

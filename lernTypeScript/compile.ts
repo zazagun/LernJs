@@ -1,6 +1,6 @@
-let myNumber: number = 42;
-let Str: string = "age: "
-console.log(Str + myNumber);
+let myNumber: number = 11;
+let age: string = "age: "
+console.log(age + myNumber);
 
 const nums: Array<number> = [1,2,3,4]
 for(let i=0; i<nums.length; i++){

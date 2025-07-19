@@ -1,16 +1,15 @@
-"use strict";
-let myNumber = 42;
-let Str = "age: ";
-console.log(Str + myNumber);
-const nums = [1, 2, 3, 4];
-for (let i = 0; i < nums.length; i++) {
+var myNumber = 11;
+var age = "age: ";
+console.log(age + myNumber);
+var nums = [1, 2, 3, 4];
+for (var i = 0; i < nums.length; i++) {
     if (nums[i] === 2) {
         console.log("тут етсь двойка");
         break;
     }
     console.log(nums[i]);
 }
-const func = (num) => {
+var func = function (num) {
     console.log(num);
 };
 func(12);
