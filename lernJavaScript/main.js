@@ -1,14 +1,3 @@
-const amerika = ['nigger' , 'china', 'idiots'];
-
-function delet(){
-    for(let items = amerika.length ; items > 0; items--){
-        console.log(amerika)
-        amerika.pop()
-    }
-}
-//delet()
-
-
 //проверка node или браузерное api
 function Broze(){
     if (typeof(window) === 'undefined'){
@@ -59,14 +48,14 @@ function OneToOneHangrit(){
 function lastChar(char){
     console.log(char.charAt(char.length - 1))
 }
-//lastChar("hello wot")
+//lastChar("hello worm")
 
 
 //вывод отсутствующих значений
 function arrayDiff(a, b) {
     return a.filter(item => !b.includes(item))
 }
-//console.log(arrayDiff([1, 2], [1]))
+// console.log(arrayDiff([1, 2], [1]))
 function array_diff(a, b) {
 
     let arr = new Array()
@@ -78,22 +67,7 @@ function array_diff(a, b) {
   
     return arr;
 }
-//console.log(array_diff([1,4,2,3], [1,2,3]))
-
-
-//первое цифра из числа
-function firstNum(chislo){
-    let firstChar = String(chislo)[0]
-    return parseInt(firstChar)
-}
-//console.log(firstNum(952))
-
-
-//четное или не четное
-function evenOrNot(num){
-    return num % 2 === 0
-} 
-//console.log(evenOrNot(7))
+// console.log(array_diff([1,4,2,3], [1,2,3]))
 
 
 //парс и распарс JSON объекта
@@ -141,18 +115,16 @@ function masiivchik(){
     }
     console.log(FullArray)
 }
-//masiivchik()
+// masiivchik()
 
 
 //првоерка на то одинаковы ли первые буквы двух слов
 function fierstCharacter(word1, word2){
     if (word1.length > 0 && word2.length > 0){
         return word1[0].toLowerCase() === word2[0].toLowerCase()
-    }else{
-        return false
     }
 }
-//console.log(fierstCharacter('Maximka', "xarishke"))
+// console.log(fierstCharacter('Maximka', "Mxarishke"))
 
 
 //пример мутации через копирование 
@@ -210,10 +182,10 @@ function tripledot(){
     name2 = "поменялось"
     jett2[1] = "поменялось"
 
-    // console.log("Объект 1: " + name + " ||Объект 2: " + jett )
-    // console.log("Объект 3: " + name2 + " ||Объект 4: " + jett2)
+    console.log("Объект 1: " + name + " ||Объект 2: " + jett )
+    console.log("Объект 3: " + name2 + " ||Объект 4: " + jett2)
 }
-//tripledot()
+// tripledot()
 
 //избегание мутации путем конвертации в строку и  распарса 
 //вложенные ссылки все равно меняются
@@ -413,14 +385,14 @@ function ToTenFromTwo(binaryNum) {
         let digit = parseInt(binaryString[i], 10)
         let position = binaryString.length - 1 - i
 
-        if (digit < 2) {
+        if (digit < 2 && digit >=0) {
             resultOfFunc += digit * 2 ** position
         }else if(digit >= 2){
             console.log("Как минимум одно из чисел более 1")
             return NaN
         }
-         else {
-            console.log("Некорректное двоичное число");
+         else{
+            console.log("Некорректное двоичное число")
             return NaN
         }
     }
@@ -548,11 +520,10 @@ function countVowels(str) {
     const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
     let count = 0;
 
-    for (let char of str) {
-        if (vowels.includes(char)) {
-            count++;
-        }
-    }
+    str.split('').forEach(item =>{
+        vowels.includes(item) ? count++ : null
+    })
+
     return count;
 }
 // console.log(countVowels("Hello World"));
@@ -749,9 +720,7 @@ const MasWithNum = [5, 12, 8, 130, 44, 7];
 const filterFunc = (masNums, index, array)=>{
     let respons = masNums.filter(num => num > 10 && num < 100)
     //каждое число умножается на 10
-    let midle = respons.map(num => {
-        return num * 10
-    })
+    let midle = respons.map(num => num * 10)
     return midle
 }
 // console.log(filterFunc(MasWithNum))
@@ -796,7 +765,32 @@ function fibonachi(num){
 // console.log(`Результат: ${fibonachi(3)}`)
 
 
+//switch используется если много условий
+const switсhWork = (params)=>{
+
+    let dayName;
+
+    switch (params) {
+        case 12:
+            dayName = 'Декабрь';
+            break;
+        case 2:
+            dayName = 'Январь';
+            break;
+        case 3:
+            dayName = 'Февраль';
+            break;
+        default:
+            dayName = 'Это не зимний месяц';
+    }
+    return dayName
+}
+// console.log(switсhWork(3))
 
 
-//6.34.00
+
+
+
+
+//7.40.15
 //code.mu 1.10 №3
