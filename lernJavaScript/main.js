@@ -697,22 +697,27 @@ function findDomain(){
 // findDomain()
 
 
-//map и forEach
-let forEachiMap = ()=>{
-    let m = [1,2,3,4]
+//map, forEach и reduce
+let forEachiMapReduce = ()=>{
+    let m = [1,2,3,4,5]
 
     const newArr = m.map((elem)=>{//создает полностью новый массив добавляя 
         return `Эот число ${elem}`//значения в один и тот же массив
     })
     console.log(newArr)
 
-
     //forEach ничего не возвращает
     m.forEach((elem, index, array)=> { //сам елмент, индекс в масс, массив целиком
         console.log(`Это число ${elem}`)
     })
+
+    //reduce для подсчета элементов
+    let sumOfReduce = m.reduce((acumulator, element) => {
+        return acumulator += element
+    })
+    console.log(sumOfReduce)
 }
-// forEachiMap()
+forEachiMapReduce()
 
 
 //использование filter в массивах js 
@@ -787,10 +792,49 @@ const switсhWork = (params)=>{
 }
 // console.log(switсhWork(3))
 
+//взаимодействие с ключом и объектом в объекте
+const forinWork = ()=>{
+    const myOb = {
+        x: 10,
+        y: 20,
+        z: 30
+    }
+
+    for(const key in myOb){
+        console.log(key, myOb[key])
+    }
+}
+// forinWork()
+
+
+//вытащить ключ или значение из объекта
+const ObjectKeyValue = () => {
+    const myOb = {
+        x: 'Name',
+        y: true,
+        z: 123
+    }
+
+    //достать только ключ и преобразовать в массив
+    Object.keys(myOb).forEach(key =>{
+        console.log(key)
+    })
+    //достать только значение и преобразовать в массив
+    Object.values(myOb).forEach(znachenie =>{
+        console.log(znachenie)
+    })
+    //достать ключ и значение и преобразовать в массив
+    Object.entries(myOb).forEach(fullValue =>{
+        console.log(fullValue)
+    })
+}
+// ObjectKeyValue()
 
 
 
 
 
-//7.40.15
+
+
+//7.57.20
 //code.mu 1.10 №3
