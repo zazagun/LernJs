@@ -71,16 +71,19 @@ function array_diff(a, b) {
 
 
 //парс и распарс JSON объекта
-const JsonObgectFile = require("./main.json")
+
 
 function parsing(){
+    const JsonObgectFile = require("./main.json")
+    //жалуется на type: module в pockege.json
+
     const parsed = JSON.stringify(JsonObgectFile)
     console.log(parsed);
 
     const unParce = JSON.parse(parsed)
     console.log(unParce)
 }
-//parsing()
+parsing()
 
 
 //рандомный примитив из объета 
@@ -702,7 +705,7 @@ let forEachiMapReduce = ()=>{
     let m = [1,2,3,4,5]
 
     const newArr = m.map((elem)=>{//создает полностью новый массив добавляя 
-        return `Эот число ${elem}`//значения в один и тот же массив
+        return `Это число ${elem}`//значения в один и тот же массив
     })
     console.log(newArr)
 
@@ -717,7 +720,7 @@ let forEachiMapReduce = ()=>{
     })
     console.log(sumOfReduce)
 }
-forEachiMapReduce()
+// forEachiMapReduce()
 
 
 //использование filter в массивах js 
@@ -836,5 +839,6 @@ const ObjectKeyValue = () => {
 
 
 
-//7.57.20
+
+//8.37.21
 //code.mu 1.10 №3

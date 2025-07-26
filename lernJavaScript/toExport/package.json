@@ -1,0 +1,12 @@
+{
+  "name": "toexport",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "qwe",
+  "type": "module",
+  "main": "export.js",
+  "scripts": {
+    "dev": "node export.js"
+  }
+}
