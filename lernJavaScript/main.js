@@ -83,7 +83,7 @@ function parsing(){
     const unParce = JSON.parse(parsed)
     console.log(unParce)
 }
-parsing()
+// parsing()
 
 
 //рандомный примитив из объета 
