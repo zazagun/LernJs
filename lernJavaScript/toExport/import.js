@@ -1,4 +1,4 @@
-import {RetName, funcToCalc, params as reName} from "./export.js"
+import {RetName, funcToCalc, params as reName} from "./export.mjs"
 
 let params = 20
 console.log(params, reName)

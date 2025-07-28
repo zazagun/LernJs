@@ -23,4 +23,5 @@ const funcToCalc = (a,b) => {
 }
 
 let params = 25
+
 export {RetName, funcToCalc, params}

@@ -71,11 +71,9 @@ function array_diff(a, b) {
 
 
 //парс и распарс JSON объекта
-
-
 function parsing(){
-    const JsonObgectFile = require("./main.json")
     //жалуется на type: module в pockege.json
+    const JsonObgectFile = require("./main.json")
 
     const parsed = JSON.stringify(JsonObgectFile)
     console.log(parsed);
@@ -83,7 +81,7 @@ function parsing(){
     const unParce = JSON.parse(parsed)
     console.log(unParce)
 }
-// parsing()
+//parsing()
 
 
 //рандомный примитив из объета 
@@ -839,6 +837,17 @@ const ObjectKeyValue = () => {
 
 
 
+
+
+
+
+
+//допилить asunc await
+async function qwe() {
+    const {RetName, funcToCalc, params} = await import ("./toExport/export.mjs")
+    return RetName("qwe")
+}
+// console.log(qwe())
 
 //8.37.21
 //code.mu 1.10 №3
