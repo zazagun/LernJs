@@ -832,6 +832,69 @@ const ObjectKeyValue = () => {
 // ObjectKeyValue()
 
 
+//все числа до 100 в которых сумма первых двух 5
+function sumToFive(){
+    for(i=0; i<1000; i++){
+        let numStr = i.toString()
+        if(numStr.length === 1){
+            if(parseInt(numStr[0]) == 5){
+                console.log(i)
+            }
+        }else{
+            if(parseInt(numStr[0]) + parseInt(numStr[1]) == 5){
+                console.log(i)
+            }
+        }
+    }
+}
+// sumToFive()
+
+
+//классы в js отдельный файл 
+function workClass(){   
+    class Animal{
+        constructor(optinos){
+            this.name = optinos.name
+            this.age = optinos.age
+            this.small = optinos.small
+        }
+        voice(){
+            console.log("It's Animal")
+        }
+    }
+
+    //класс Cat наследует из Animal
+    class Cat extends Animal{
+        static type = "CAT"
+
+        //вызов конструктора и super для создания color
+        constructor(optinos){
+            super(optinos)
+            this.color = optinos.color
+        }
+
+        voice(){//переписываем метод voice
+            super.voice()
+            console.log("it's a cat")
+        }
+
+        get realAge(){
+            return this.age * 3
+        }
+        
+        set realAge(newAge){
+            this.age = newAge
+        }
+    }
+
+    const cat = new Cat({
+        name:"cat",
+        age: 4,
+        small:true,
+        color: "black"
+    })
+    console.log(cat)
+}
 
 
 
@@ -842,12 +905,19 @@ const ObjectKeyValue = () => {
 
 
 
-//допилить asunc await
+
+
+
+
+
+
+
+//допилить async await
 async function qwe() {
-    const {RetName, funcToCalc, params} = await import ("./toExport/export.mjs")
+    const {RetName, funcToCalc, params} = await Promise(import ("./toExport/export.mjs"))
     return RetName("qwe")
 }
 // console.log(qwe())
 
-//8.37.21
-//code.mu 1.10 №3
+//9.08.18
+//code.mu 2.3 №3
