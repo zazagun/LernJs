@@ -9,10 +9,20 @@
 <body>
     <!--квадраты-->
     <div id="box1"></div>
+    <button onclick="ShowThat()">показать</button>
+    <button onclick="HideThat()">скрыть</button>
     <div id="box2"></div>
     <!--круг-->
     <div id="circle1"></div>
 
     <script src="./main.js"></script>
+    <script>
+        function ShowThat(){
+            box1.show()
+        }
+        function HideThat(){
+            box1.hide()
+        }
+    </script>
 </body>
 </html>
