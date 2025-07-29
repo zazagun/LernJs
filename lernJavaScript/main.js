@@ -852,55 +852,38 @@ function sumToFive(){
 
 //классы в js отдельный файл 
 function workClass(){   
-    class Animal{
-        constructor(optinos){
-            this.name = optinos.name
-            this.age = optinos.age
-            this.small = optinos.small
+        class Animal{
+        constructor(options){
+            this.names = options.names,
+            this.secName = options.secName
         }
+
         voice(){
-            console.log("It's Animal")
+            console.log("it's Animal")
         }
     }
 
-    //класс Cat наследует из Animal
-    class Cat extends Animal{
-        static type = "CAT"
-
-        //вызов конструктора и super для создания color
-        constructor(optinos){
-            super(optinos)
-            this.color = optinos.color
-        }
-
-        voice(){//переписываем метод voice
-            super.voice()
-            console.log("it's a cat")
-        }
-
-        get realAge(){
-            return this.age * 3
-        }
-        
-        set realAge(newAge){
-            this.age = newAge
+    class Dog extends Animal{
+        constructor(options){
+                super(options)
+                this.type = options.type
         }
     }
 
-    const cat = new Cat({
-        name:"cat",
-        age: 4,
-        small:true,
-        color: "black"
+    const any = new Animal({
+        names: "Mr",
+        secName:"Penis"
     })
-    console.log(cat)
+    console.log(any)
+
+
+    const sobaca = new Dog({
+        names: "Ygolek",
+        secName: "Azura",
+        type: "Dogich"
+    })
+    console.log(sobaca)
 }
-
-
-
-
-
-
 
 
 
@@ -919,5 +902,6 @@ async function qwe() {
 }
 // console.log(qwe())
 
-//9.08.18
+
+//9.37.52
 //code.mu 2.3 №3
