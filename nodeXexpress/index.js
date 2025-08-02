@@ -1,14 +1,21 @@
-const express = require("express")
-const app = express()
+// const express = require("express")
+// const app = express()
 
 
 
 const http = require('http')
+const fs = require('fs')
 
 const server = http.createServer((req,res) => {
     res.writeHead(200, {'content-type': 'text/html; charset=utf-8'})
-    res.end("<style>html { background: black; color: white; }</style>"
-         + "hello <b>nodeJS</b>")
+
+    if(req.url == "/"){
+        fs.createReadStream('./temps/index.html').pipe(res)
+    }else if(req.url == "/time"){
+        fs.createReadStream('./temps/time.html').pipe(res)
+    }else{
+        fs.createReadStream('./temps/error.html').pipe(res)
+    }
 })
 
 const PORT = 4000
