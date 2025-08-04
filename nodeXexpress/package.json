@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "nodeJs": "nodemon ./node/index.js",
+    "expressJs": "nodemon ./express/main.js"
   },
   "keywords": [],
   "author": "",
