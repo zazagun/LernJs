@@ -19,7 +19,7 @@ const funcToCalc = (a,b) => {
             return accum += plusing
         })
     }
-    return sum
+    return console.log(sum)
 }
 
 let params = 25

@@ -809,30 +809,6 @@ const forinWork = ()=>{
 // forinWork()
 
 
-//вытащить ключ или значение из объекта
-const ObjectKeyValue = () => {
-    const myOb = {
-        x: 'Name',
-        y: true,
-        z: 123
-    }
-
-    //достать только ключ и преобразовать в массив
-    Object.keys(myOb).forEach(key =>{
-        console.log(key)
-    })
-    //достать только значение и преобразовать в массив
-    Object.values(myOb).forEach(znachenie =>{
-        console.log(znachenie)
-    })
-    //достать ключ и значение и преобразовать в массив
-    Object.entries(myOb).forEach(fullValue =>{
-        console.log(fullValue)
-    })
-}
-// ObjectKeyValue()
-
-
 //все числа до 100 в которых сумма первых двух 5
 function sumToFive(){
     for(i=0; i<1000; i++){
@@ -849,6 +825,58 @@ function sumToFive(){
     }
 }
 // sumToFive()
+
+
+//отличие Map и {}
+function mapXobj(){
+    let mapInjs = new Map()   //Map
+    mapInjs.set("name", "Max")
+    mapInjs.set("SecName", "Fo")
+    mapInjs.set("age", 52)
+
+    console.log(mapInjs.has("name"))
+    console.log(mapInjs.get("SecName"))
+    mapInjs.delete("age")//вернет true если удалил
+    console.log(mapInjs)
+    mapInjs.clear()//удаляет всё
+
+
+    let recipeMap = new Map([
+        ["огурец", 500],
+        ["помидор", 350],
+        ["лук", 50]
+    ]);
+
+    for (let vegetable of recipeMap.keys()) {
+        console.log((vegetable)) // огурец, помидор, лук
+    }
+    for (let amount of recipeMap.values()) {
+        console.log((amount)) // 500, 350, 50
+    }
+    for (let entry of recipeMap) {
+        console.log((entry)) // огурец,500 (и так далее)
+    }
+
+    // ----------------------------------------- //
+
+    const myOb = {
+        x: 'Name',
+        y: true,
+        z: 123
+    }
+
+    //достать только ключ и преобразовать в массив
+    Object.keys(myOb).forEach(key =>{
+        console.log(key)
+    })
+
+    //достать ключ и значение и преобразовать в массив
+    Object.entries(myOb).forEach(fullValue =>{
+        console.log(fullValue)
+    })
+
+}
+// mapXobj()
 
 
 //классы в js отдельный файл 
@@ -893,16 +921,22 @@ function workClass(){
 
 
 
+const myProm = new Promise(async(resolve, reject) =>{
+    try{
+        const {RetName, funcToCalc, params} = await import("./toExport/export.mjs")
+        RetName("Max")
+        funcToCalc(5,params)
+        resolve(console.log("done"))
+    }catch(e){  
+        reject(
+            i = 33
+        )
+    }
+})
 
 
 
-//допилить async await
-async function qwe() {
-    const {RetName, funcToCalc, params} = await Promise(import ("./toExport/export.mjs"))
-    return RetName("qwe")
-}
-// console.log(qwe())
 
 
-//9.43.10
+//9.48.40
 //code.mu 2.3 №3
