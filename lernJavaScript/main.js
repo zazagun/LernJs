@@ -102,7 +102,6 @@ function randomObj(number){
 
 //Создание вложенных массивов с пересчетом
 
-
 function masiivchik(){
     let FullArray = []
 
@@ -118,7 +117,7 @@ function masiivchik(){
     return FullArray
  
 }
-// masiivchik()
+// console.log(masiivchik())
 
 
 //првоерка на то одинаковы ли первые буквы двух слов
