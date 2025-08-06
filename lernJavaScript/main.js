@@ -101,9 +101,10 @@ function randomObj(number){
 
 
 //Создание вложенных массивов с пересчетом
-let FullArray = []
+
 
 function masiivchik(){
+    let FullArray = []
 
     for(n=1; n<=4; n++){       
         masPlus = []
@@ -114,7 +115,8 @@ function masiivchik(){
         
         FullArray.push(masPlus)
     }
-    console.log(FullArray)
+    return FullArray
+ 
 }
 // masiivchik()
 
