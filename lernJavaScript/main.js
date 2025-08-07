@@ -504,7 +504,7 @@ function findIndex(arr, find){
 // console.log(findIndex(mas, 2))
 
 
-//Фильтрация массива, возвращение только четных чисел 
+//Фильтрация массива четные или не четные
 function onlyEven(arr){
     let result = []
     for(i=0; i<arr.length; i++){
@@ -515,6 +515,11 @@ function onlyEven(arr){
     return result
 }
 // console.log(onlyEven([1,2,1,7,6,8,9,11,12,"2"]))
+function onlyOdd(arr){
+    const result = arr.filter(item => item%2 != 0)
+    return result
+}
+// console.log(onlyOdd([1,2,1,7,6,8,9,11,12,"2"]))
 
 
 //подсчет гласных в строке
@@ -880,13 +885,16 @@ function mapXobj(){
         console.log(fullValue)
     })
 
+    //все это так же используется для объектов 
+    //созданных через Map()
+
 }
 // mapXobj()
 
 
 //классы в js отдельный файл 
 function workClass(){   
-        class Animal{
+    class Animal{
         constructor(options){
             this.names = options.names,
             this.secName = options.secName
@@ -924,6 +932,18 @@ function workClass(){
 
 
 
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then(response => response.json())//не указав Json() можно получить код ответа
+  .then(res => {//этот then обрабатывает Promise от Json()
+
+    const filteredPosts = res.filter(post => post.userId === 1)
+
+    const onlyValue = filteredPosts.map(res => res.body)
+    console.log(onlyValue)
+  })
+  .catch(e => console.log(e.name))
+
+
 
 
 const myProm = new Promise(async(resolve, reject) =>{
@@ -933,9 +953,7 @@ const myProm = new Promise(async(resolve, reject) =>{
         funcToCalc(5,params)
         resolve(console.log("done"))
     }catch(e){  
-        reject(
-            i = 33
-        )
+        reject()
     }
 })
 
@@ -943,5 +961,5 @@ const myProm = new Promise(async(resolve, reject) =>{
 
 
 
-//9.48.40
+//10.00.33
 //code.mu 2.3 №3
