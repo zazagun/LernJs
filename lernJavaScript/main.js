@@ -865,9 +865,14 @@ function mapXobj(){
         z: 123
     }
 
-    //достать только ключ и преобразовать в массив
+    //достать только ключ 
     Object.keys(myOb).forEach(key =>{
         console.log(key)
+    })
+
+    //достать только значение
+    Object.values(myOb).forEach(value =>{
+        console.log(value)
     })
 
     //достать ключ и значение и преобразовать в массив
