@@ -957,14 +957,16 @@ const myProm = new Promise(async(resolve, reject) =>{
     }
 })
 
-//id комов с userId 3
+//id комов с userId 3 только четные
 fetch('https://jsonplaceholder.typicode.com/posts')
 .then(res => res.json())
 .then(res => {
     const only3 = res.filter(item => item.userId === 3)
 
     const onlyIdCom = only3.map(user3 => user3.id)
-    console.log(onlyIdCom) 
+
+    const onlyEvens = onlyIdCom.filter(even => even%2 === 0)
+    console.log(onlyEvens) 
 })
 
 
