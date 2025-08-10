@@ -1,3 +1,5 @@
+const { params } = require("./toExport/export.mjs")
+
 //проверка node или браузерное api
 function Broze(){
     if (typeof(window) === 'undefined'){
@@ -928,81 +930,79 @@ function workClass(){
 }
 
 
+//импорт функций и переменных и их дальнейшее исопльзование
+function importsFromMjs(){
+    import('./toExport/export.mjs')
+  .then(module => {
 
+    const { RetName, funcToCalc, params } = module
 
+    RetName("Max");
+    funcToCalc(5, params);//можем использовать в функции
 
-
-fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(response => response.json())//не указав Json() можно получить код ответа
-  .then(res => {//этот then обрабатывает Promise от Json()
-
-    const filteredPosts = res.filter(post => post.userId === 1)
-
-    const onlyValue = filteredPosts.map(res => res.body)
-    console.log(onlyValue)
+    console.log("Функции успешно выполнены!")
   })
-  .catch(e => console.log(e.name))
+  .catch(error => {
+    console.error("Произошла ошибка при импорте модуля:", error)
+  })
+
+  console.log(params)
+}
+// importsFromMjs()
 
 
+//импорт при помощи промиса
+function promiseImport(){
+    const myPromise = new Promise(async(resolve, reject) => {
 
+    const {RetName, funcToCalc, params} = await import("./toExport/export.mjs")
 
-//вывод title от userId3 
-fetch('https://jsonplaceholder.typicode.com/posts')
-.then(res => res.json())
-.then(res => {
-    const user3 = res.filter(item => item.userId === 3)
-
-    const title = user3.map(tit => tit.title)
-
-    const arr = new Map()
-    arr.set("title",title)
-    console.log(arr)
-})
-.catch(e => console.log(e.name))
-
-
-
-
-const myProm = new Promise(async(resolve, reject) =>{
-    try{
-        const {RetName, funcToCalc, params} = await import("./toExport/export.mjs")
-        RetName("Max")
-        funcToCalc(5,params)
-        resolve(console.log("done"))
-    }catch(e){  
-        reject()
-    }
-})
-
-
-
-
-//доделать спроси у ии правильно или нет
-const myPromise = new Promise((resolve, reject) => {
-
-    const {RetName, funcToCalc, params} = import("./toExport/export.mjs")
-
-  if (RetName || funcToCalc || params) {
-    resolve(
-        RetName("Max"),
-        funcToCalc(5,params)
-        (console.log("done"))
+    if (RetName && funcToCalc && params) {
+        resolve(
+            RetName("Max"),
+            funcToCalc(5,params),
+            console.log("done")
     )}else {
         reject("Произошла ошибка!");
     }
-})
-myPromise
-  .then(result => {
-    console.log(result); // Обработка успешного выполнения
-  })
-  .catch(error => {
-    console.error(error); // Обработка ошибки
-  });
+    }).catch(e => console.log(e.name))
+}
+//promiseImport
+
+
+const fetchRequire =()=>{
+    //вывод комментов от userId 1
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())//не указав Json() можно получить код ответа
+        .then(res => {//этот then обрабатывает Promise от Json()
+
+        const filteredPosts = res.filter(post => post.userId === 1)
+
+        const onlyValue = filteredPosts.map(res => res.body)
+        console.log(onlyValue)
+    }).catch(e => console.log(e.name))
+
+    //вывод title от userId3 
+    fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    .then(res => {
+        const user3 = res.filter(item => item.userId === 3)
+
+        const title = user3.map(tit => tit.title)
+
+        const arr = new Map()
+        arr.set("titlew",title)
+        console.log(arr)
+    })
+    .catch(e => console.log(e.name))
+}
+// fetchRequire()
 
 
 
 
 
 
-//10.00.33
+
+//10.15.34
 //code.mu 2.3 №3
