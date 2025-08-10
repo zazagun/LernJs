@@ -944,6 +944,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   .catch(e => console.log(e.name))
 
 
+
+
 //вывод title от userId3 
 fetch('https://jsonplaceholder.typicode.com/posts')
 .then(res => res.json())
@@ -959,6 +961,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 .catch(e => console.log(e.name))
 
 
+
+
 const myProm = new Promise(async(resolve, reject) =>{
     try{
         const {RetName, funcToCalc, params} = await import("./toExport/export.mjs")
@@ -969,6 +973,31 @@ const myProm = new Promise(async(resolve, reject) =>{
         reject()
     }
 })
+
+
+
+
+//доделать спроси у ии правильно или нет
+const myPromise = new Promise((resolve, reject) => {
+
+    const {RetName, funcToCalc, params} = import("./toExport/export.mjs")
+
+  if (RetName || funcToCalc || params) {
+    resolve(
+        RetName("Max"),
+        funcToCalc(5,params)
+        (console.log("done"))
+    )}else {
+        reject("Произошла ошибка!");
+    }
+})
+myPromise
+  .then(result => {
+    console.log(result); // Обработка успешного выполнения
+  })
+  .catch(error => {
+    console.error(error); // Обработка ошибки
+  });
 
 
 
