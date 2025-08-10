@@ -944,6 +944,19 @@ fetch('https://jsonplaceholder.typicode.com/posts')
   .catch(e => console.log(e.name))
 
 
+//вывод title от userId3 
+fetch('https://jsonplaceholder.typicode.com/posts')
+.then(res => res.json())
+.then(res => {
+    const user3 = res.filter(item => item.userId === 3)
+
+    const title = user3.map(tit => tit.title)
+
+    const arr = new Map()
+    arr.set("title",title)
+    console.log(arr)
+})
+.catch(e => console.log(e.name))
 
 
 const myProm = new Promise(async(resolve, reject) =>{
@@ -957,17 +970,6 @@ const myProm = new Promise(async(resolve, reject) =>{
     }
 })
 
-//id комов с userId 3 только четные
-fetch('https://jsonplaceholder.typicode.com/posts')
-.then(res => res.json())
-.then(res => {
-    const only3 = res.filter(item => item.userId === 3)
-
-    const onlyIdCom = only3.map(user3 => user3.id)
-
-    const onlyEvens = onlyIdCom.filter(even => even%2 === 0)
-    console.log(onlyEvens) 
-})
 
 
 
