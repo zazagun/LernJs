@@ -971,18 +971,33 @@ function promiseImport(){
 
 
 const fetchRequire =()=>{
+
+    const getData = url =>{
+        return new Promise((resolve, reject) =>{
+            fetch(url)
+             .then(makeJSONdata => makeJSONdata.json())//json() создает promise
+             .then(json => resolve(json))
+             .catch(error => reject(error))
+        })
+    }
+
+    // getData('https://jsonplaceholder.typicode.com/posts')
+    //     .then(res => {console.log(res)})
+    //     .catch(error => console.log(error.name))
+
+
     //вывод комментов от userId 1
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(response => response.json())//не указав Json() можно получить код ответа
+    getData('https://jsonplaceholder.typicode.com/posts')
         .then(res => {//этот then обрабатывает Promise от Json()
 
         const filteredPosts = res.filter(post => post.userId === 1)
 
-        const onlyValue = filteredPosts.map(res => res.body)
+        const onlyValue = filteredPosts.map(res => res.title)
         console.log(onlyValue)
-    }).catch(e => console.log(e.name))
+    }).catch(error => console.log(error.name))
 
-    //вывод title от userId3 
+
+    // вывод title от userId3 
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then(res => res.json())
     .then(res => {
@@ -1004,5 +1019,10 @@ const fetchRequire =()=>{
 
 
 
-//10.15.34
+
+
+
+
+
+//10.25.30
 //code.mu 2.3 №3
