@@ -1014,6 +1014,21 @@ const fetchRequire =()=>{
 // fetchRequire()
 
 
+//асинхронные функции возвращает промис
+const timer = ()=>
+    new Promise((resolve, reject) =>{
+        setTimeout(()=> resolve(), 2000)
+    })
+
+const asyncFn = async()=>{
+    console.log("timer start")
+    const startTime = performance.now()
+    await timer()
+    const endTime = performance.now()
+    console.log("timer ended", endTime-startTime)
+}
+
+// asyncFn()
 
 
 
@@ -1021,8 +1036,4 @@ const fetchRequire =()=>{
 
 
 
-
-
-
-//10.25.30
 //code.mu 2.3 №3
