@@ -1029,6 +1029,77 @@ const asyncFn = async()=>{
 }
 
 // asyncFn()
+//  .catch(e => console.log(e.name))
+
+
+//получить сумму чисел из строки
+function sumOfString(str){
+    const splitedStr = str.split(',')
+    let result = 0
+
+    for(let num of splitedStr){
+        let numToNumber = Number(num)
+
+        if(!isNaN(numToNumber)){
+            result += numToNumber
+        }
+    }
+    return result
+
+}
+// console.log(sumOfString('12,34,qweas,56'))
+
+
+const workWithMapIfilter = () => {
+    const users = [
+    { id: 1, name: "Алексей", age: 25, isActive: true, balance: 1500 },
+    { id: 2, name: "Мария", age: 30, isActive: false, balance: 2000 },
+    { id: 3, name: "Иван", age: 22, isActive: true, balance: 500 },
+    { id: 4, name: "Ольга", age: 40, isActive: true, balance: 3000 },
+    { id: 5, name: "Пётр", age: 19, isActive: false, balance: 1000 },
+    ];
+
+    const ActiveUsers = users.filter(user => user.isActive === true)
+
+    const nameIbalance = ActiveUsers.map(person => {
+        
+        let bonusBalance;
+        if(person.balance > 1000){
+            bonusBalance = person.balance * 1.1
+        }else{
+            bonusBalance = person.balance * 1.05
+        }
+
+        return{
+            id: person.id,
+            name: person.name,
+            bonusBalance: bonusBalance.toFixed(0)
+        }
+    })
+    console.log(nameIbalance)
+
+    ///------second task-----///
+
+    const products = [
+        { id: 1, name: "Ноутбук", category: "Электроника", price: 45000, inStock: true, discount: 10 },
+        { id: 2, name: "Смартфон", category: "Электроника", price: 30000, inStock: false, discount: 5 },
+        { id: 3, name: "Книга", category: "Книги", price: 1500, inStock: true, discount: 0 },
+        { id: 4, name: "Наушники", category: "Электроника", price: 5000, inStock: true, discount: 15 },
+        { id: 5, name: "Часы", category: "Аксессуары", price: 8000, inStock: false, discount: 20 },
+        { id: 6, name: "Монитор", category: "Электроника", price: 20000, inStock: true, discount: 0 },
+    ]
+
+    const inStockTrue = products.filter(item => item.inStock === true && item.discount > 0 && item.category === "Электроника")
+    const withDiscount = inStockTrue.map(item => {
+        
+        return {
+            name: item.name,
+            price: item.price * (1 - item.discount/100) 
+        }
+    })
+    console.log(withDiscount)
+}
+// workWithMapIfilter()
 
 
 
@@ -1036,4 +1107,10 @@ const asyncFn = async()=>{
 
 
 
-//code.mu 2.3 №3
+
+
+
+
+
+
+//code.mu 2.5 №2
