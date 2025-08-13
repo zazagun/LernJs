@@ -34,18 +34,6 @@ const changeMassiv = function(){
 //changeMassiv()
 
 
-//сложение чисел от 1 до 100
-function OneToOneHangrit(){
-    let n = 0;
-
-    for(i=0; i<=100; i++){
-        n += i
-    }
-    console.log(n)
-}
-// OneToOneHangrit()
-
-
 //вывод последнего символа в строке
 function lastChar(char){
     console.log(char.charAt(char.length - 1))
@@ -103,7 +91,6 @@ function randomObj(number){
 
 
 //Создание вложенных массивов с пересчетом
-
 function masiivchik(){
     let FullArray = []
 
@@ -277,21 +264,6 @@ function sumOfSqrnum(massivOfNum){
     return console.log(sumOfSqr)
 }
 //sumOfSqrnum([1,4,2,5,2,5])
-
-
-// сумма чисел больше 0 но меньше 10
-function sumTen(massivWithNum){
-    const lengthOfMassiv = massivWithNum.length
-    sum = 0 
-
-    for(i=0; i < lengthOfMassiv; i++){
-        if(massivWithNum[i] > 0 && massivWithNum[i] < 10){
-            sum += massivWithNum[i]
-        }
-    }
-    return console.log(sum)
-}
-// sumTen([1,5,2,6,10,33,23,1,6,32,10])
 
 
 //разбить строку на буквы в массиве
@@ -637,7 +609,7 @@ function TryCath(){
 
 
 //проверка на то, одинаковые ли массивы
-const ArrayForCheck = [1,2,3]
+const ArrayForCheck1 = [1,2,3]
 const ArrayForCheck2 = new Array(1,2,3)
 function ravnoOrNo(a,b){
 
@@ -656,7 +628,7 @@ function ravnoOrNo(a,b){
     }
     return result
 }
-// console.log(ravnoOrNo(ArrayForCheck, ArrayForCheck2))
+// console.log(ravnoOrNo(ArrayForCheck1, ArrayForCheck2))
 
 
 // операторы ?? и ??=
@@ -1110,7 +1082,5 @@ const workWithMapIfilter = () => {
 
 
 
-
-
-
-//code.mu 2.5 №2
+//DOM 0.6.09
+//code.mu 2.6 №2
