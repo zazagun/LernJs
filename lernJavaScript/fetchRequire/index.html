@@ -18,6 +18,8 @@
     <hr>
     <p id="userId"></p>
     <button onclick="getId()">получить id</button>
+    <hr>
+    <div id="body"></div>
 </body>
 <script>
     const getData = url => {
@@ -57,5 +59,37 @@
                 document.getElementById("userId").style.padding = 10 + "px"
             })
     }
+
+    function toDo(){
+        getData("https://jsonplaceholder.typicode.com/todos")
+        .then(res => {
+            const bodyDiv = document.getElementById("body")
+            bodyDiv.innerHTML = ""
+            res.forEach(todo => {
+                const todoDiv = document.createElement("div")
+                todoDiv.textContent = `UserId: ${todo.userId}, ID: ${todo.id}, Title: ${todo.title}, Completed: ${todo.completed}`
+                todoDiv.style.padding = "10px"
+                todoDiv.style.margin = "7px"
+                todoDiv.style.borderRadius = "15px"
+                todoDiv.style.display = "flex"
+                todoDiv.style.justifyContent = "center"
+                todoDiv.style.alignItems = "center"
+                todoDiv.style.backgroundColor = todo.completed ? "lightgreen" : "lightcoral"
+                bodyDiv.appendChild(todoDiv)
+            })
+        })
+    }
+    toDo()
 </script>
+<style>
+#body{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    
+    border: solid;
+    border-radius: 15px;
+}
+</style>
 </html>
