@@ -55,18 +55,6 @@
             .catch(error => console.log(error.message))
     }
 
-    function getId(){
-        document.getElementById("userId").textContent = "Загрузка..."        
-
-        getData('https://jsonplaceholder.typicode.com/posts')
-            .then(res => {
-                const only1id = res.filter(post => post.userId === 1)
-                const mapqwe = only1id.map(postid => postid.id)
-                document.getElementById("userId").textContent = mapqwe.join(', ')
-                document.getElementById("userId").style.padding = 10 + "px"
-            })
-    }
-
     function toDo(){
         getData("https://jsonplaceholder.typicode.com/todos")
         .then(res => {

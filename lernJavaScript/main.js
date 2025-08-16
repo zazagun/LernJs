@@ -1062,14 +1062,14 @@ const workWithMapIfilter = () => {
     ]
 
     const inStockTrue = products.filter(item => item.inStock === true && item.discount > 0 && item.category === "Электроника")
-    const withDiscount = inStockTrue.map(item => {
+    const resultWithDiscount = inStockTrue.map(item => {
         
         return {
             name: item.name,
             price: item.price * (1 - item.discount/100) 
         }
     })
-    console.log(withDiscount)
+    console.log(resultWithDiscount)
 }
 // workWithMapIfilter()
 
@@ -1082,5 +1082,5 @@ const workWithMapIfilter = () => {
 
 
 
-//DOM 0.6.09
+//DOM 0.26.56
 //code.mu 2.6 №2
