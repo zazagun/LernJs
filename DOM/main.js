@@ -19,4 +19,15 @@ for(const item of findTag){
 //querySelector работает по id, class и тегу
 const elementById = document.querySelector('#myId')
 const elementByClass = document.querySelector('.myClass')
-const elementByTag = document.querySelector('div') 
+const elementByTag = document.querySelector('div')
+
+
+const ByTag = document.getElementsByTagName("ul")
+console.log(ByTag)
+
+const p = document.querySelector("#pishka")
+const textOfP = p.innerHTML
+console.log(textOfP)
+p.innerHTML = `<strong>${textOfP}</strong><br>JAVA SCript`
+
+
