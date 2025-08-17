@@ -1090,5 +1090,4 @@ console.log(reversNumsInArray([123, 456, 789]))
 
 
 
-//DOM 0.37.14
 //code.mu 2.6 №3
