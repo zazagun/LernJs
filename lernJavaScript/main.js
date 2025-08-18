@@ -1089,5 +1089,5 @@ console.log(reversNumsInArray([123, 456, 789]))
 
 
 
-
+//алгосы 15.23
 //code.mu 2.6 №3
