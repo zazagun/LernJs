@@ -748,7 +748,7 @@ function fibonachi(num){
         return fibonachi(num - 1) + fibonachi(num - 2)
     }
 }
-// console.log(`Результат: ${fibonachi(3)}`)
+// console.log(`Результат: ${fibonachi(8)}`)
 
 
 //switch используется если много условий
@@ -1083,11 +1083,16 @@ function reversNumsInArray(arr){
     }
     return result
 }
-console.log(reversNumsInArray([123, 456, 789]))
+// console.log(reversNumsInArray([123, 456, 789]))
 
 
 
 
 
-//алгосы 15.23
+
+
+
+
+
+//алгосы 25.40
 //code.mu 2.6 №3
