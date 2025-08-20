@@ -1074,16 +1074,6 @@ const workWithMapIfilter = () => {
 // workWithMapIfilter()
 
 
-//реверс чисел в массиве
-function reversNumsInArray(arr){
-    let result = []
-    for(let item of arr){
-        let midle = item.toString().split('').reverse().join('')
-        result.push(parseInt(midle, 10))
-    }
-    return result
-}
-// console.log(reversNumsInArray([123, 456, 789]))
 
 
 
@@ -1093,6 +1083,5 @@ function reversNumsInArray(arr){
 
 
 
-
-//алгосы 25.40
+//js 1
 //code.mu 2.6 №3
