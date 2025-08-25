@@ -62,7 +62,7 @@ function array_diff(a, b) {
 
 //парс и распарс JSON объекта
 function parsing(){
-    //жалуется на type: module в pockege.json
+    //жалуется на type: module в packege.json
     const JsonObgectFile = require("./main.json")
 
     const parsed = JSON.stringify(JsonObgectFile)
@@ -1122,6 +1122,26 @@ function studentsSome(){
 }
 
 
+//использование Promise.all
+function usePromiseAll(){
+    let urls = [
+        'https://api.github.com/users/iliakan',
+        'https://api.github.com/users/remy',
+        'https://api.github.com/users/jeresigsdsdsdsds'
+    ];
+
+    let requests = urls.map(url => fetch(url));
+
+    // Promise.all будет ожидать выполнения всех промисов
+    Promise.all(requests)
+    .then(responses => responses.forEach(item =>{
+        if(item.ok){
+            console.log("its Work")
+        }else{
+            console.log("dosnt work(((")
+        }}
+    ));
+}
 
 
 
@@ -1129,5 +1149,6 @@ function studentsSome(){
 
 
 
+//node 33.20
 //js 1
 //code.mu 2.6 №3
