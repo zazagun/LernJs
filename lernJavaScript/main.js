@@ -1075,6 +1075,52 @@ const workWithMapIfilter = () => {
 
 
 
+function studentsSome(){
+    const students = [
+        { id: 1, name: "Алиса", grades: [4, 5, 3, 5], course: 2 },
+        { id: 2, name: "Боб", grades: [3, 3, 4, 2], course: 1 },
+        { id: 3, name: "Чарли", grades: [5, 5, 5, 4], course: 3 },
+        { id: 4, name: "Дэйв", grades: [2, 3, 2, 3], course: 1 },
+        { id: 5, name: "Ева", grades: [4, 4, 5, 4], course: 2 },
+    ]
+
+    //сортировка по среднему баллу
+    function sortStudentsByAverageGrade(students){
+        return students.sort((a,b) =>{
+            const person1 = a.grades.reduce((sum, grade) => sum + grade, 0 ) / a.grades.length 
+            const person2 = b.grades.reduce((sum, grade) => sum + grade, 0) / b.grades.length
+            return person2 - person1
+        })
+    }
+
+    //найти студентов с оценкой меньше 3
+    function studentsWithGradesLowOfThree(students){
+        return students
+            .filter(student => student.grades.filter(grade => grade < 3). length > 0)
+            .map(student => student.name)
+    }
+
+    //сортировка студентов по курсам
+    function groupStudentsByCourse(students) {
+        return students.reduce((acc,elem) => {
+            if(!acc[elem.course]){
+                acc[elem.course] = []
+            }
+            acc[elem.course].push(elem)
+            return acc
+        }, {})
+    }
+    // console.log(groupStudentsByCourse(students))
+
+
+    //удалить студента с id
+    function DeletStudentWithId(students, id){
+        return students.filter(item => item.id !== id)
+    }
+    const resuleWIthoutSomeId = DeletStudentWithId(students, 2)
+    console.log(newMas)
+}
+
 
 
 
