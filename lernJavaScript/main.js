@@ -27,7 +27,7 @@ const changeMassiv = function(){
         return value = "undefined";
     }
     return value;
-    });
+    })
 
     console.log(mas)
 }
@@ -220,13 +220,13 @@ function reverseString(string){
 //среднее значение в массиве
 function SredZnach(AllNums) {
     const lengthOfMassiv = AllNums.length
-    let countOfIteretions = 0;
-    let sumOfNum = 0;
+    let countOfIteretions = 0
+    let sumOfNum = 0
 
     for (let i = 0; i < lengthOfMassiv; i++) {
         if(typeof AllNums[i] === 'number' && !isNaN(AllNums[i])){
-            sumOfNum += AllNums[i];
-            countOfIteretions++;
+            sumOfNum += AllNums[i]
+            countOfIteretions++
         }
     }
     if(countOfIteretions === 0) {
@@ -1128,9 +1128,9 @@ function usePromiseAll(){
         'https://api.github.com/users/iliakan',
         'https://api.github.com/users/remy',
         'https://api.github.com/users/jeresigsdsdsdsds'
-    ];
+    ]
 
-    let requests = urls.map(url => fetch(url));
+    let requests = urls.map(url => fetch(url))
 
     // Promise.all будет ожидать выполнения всех промисов
     Promise.all(requests)
@@ -1140,7 +1140,7 @@ function usePromiseAll(){
         }else{
             console.log("dosnt work(((")
         }}
-    ));
+    ))
 }
 
 
@@ -1149,6 +1149,6 @@ function usePromiseAll(){
 
 
 
-//node 33.20
+//node 38.57
 //js 1
 //code.mu 2.6 №3
