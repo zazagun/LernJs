@@ -1149,6 +1149,6 @@ function usePromiseAll(){
 
 
 
-//node 38.57
+//node 1.04.53
 //js 1
 //code.mu 2.6 №3
