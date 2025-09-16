@@ -1,5 +1,5 @@
 const http = require("http")
-const { url } = require("inspector")
+const url = require("inspector")
 const { couldStartTrivia, createTypeReferenceDirectiveResolutionCache } = require("typescript")
 const dotenv = require("dotenv").config({
     path: "./nodeJsLern/.env", 
@@ -10,9 +10,10 @@ const PORT = process.env.PORT || 3500
 
 class Router{
     constructor(){
-        
+    
     }
 }
+
 
 const server = http.createServer((req,res)=>{
     res.end(req,url)
