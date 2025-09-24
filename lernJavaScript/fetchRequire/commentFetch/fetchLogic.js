@@ -8,7 +8,6 @@ async function getData(url){
 
 //get status
 
-
 getData("https://jsonplaceholder.typicode.com/posts")
 .then(res => {
     res.forEach(comment =>{

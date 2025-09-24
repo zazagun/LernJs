@@ -1,5 +1,3 @@
-const { params } = require("./toExport/export.mjs")
-
 //проверка node или браузерное api
 function Broze(){
     if (typeof(window) === 'undefined'){
@@ -11,13 +9,6 @@ function Broze(){
     }
 }
 //Broze()
-
-
-//вызов анонимной функции
-(function(x){
-    console.log(x)
-})
-// (5)//для вызова написать скобки и если надо передать параметр
 
 
 //изменение типа значения на str
@@ -579,7 +570,7 @@ function round(mas){
 function Err(){
     function notE(a){
         if(a.toLowerCase() === "e"){
-            throw Error("НЕ ВВОДИ БЛЯ Е")
+            throw Error("НЕ ВВОДИ Е")
         }else{
             return true
         }
@@ -1149,6 +1140,10 @@ function usePromiseAll(){
 
 
 
-//node 1.29.40
+
+
+
+
+//node 1.51.40
 //js 1
-//code.mu 2.6 №3
+//code.mu 2.6 №5
