@@ -14,34 +14,57 @@
         display: flex;
         justify-content: space-between;
         min-height: 400px;
-        margin-top: 30vh;
+        margin-top: 25vh;
     }
 
     #inputDataDiv{
         display: flex;
+        width: 250px;
         margin-left: 10%;
         border: solid;
         min-width: 200px;
+        border-radius: 25px;
         justify-content: center;    
-        align-items: center;    
-
+        align-items: center;  
+        text-align: center;        
     }
 
     #getDataDiv{
         display: flex;
+        width: 250px;
+        border-radius: 25px;
         margin-right: 10%;
         border: solid;
         min-width: 200px;
         justify-content: center;        
         align-items:center;
-
+    }
+    input{
+        border-radius: 6px;
+        text-decoration: none;
+    }
+    label{
+        display: flex;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        justify-content: center;
+    }
+    button{
+        margin-top: 4px;
     }
 </style>
+
+
 <body>
     <div id="mainBlock">
         <div id="inputDataDiv">
-            <form>
-                form for the post date
+            <form action="" id="formsForDate">
+                <label>Введите имя</label>
+                <input id="fierstNameIn">
+                <br>
+                <label>Введите фамилию</label>
+                <input id="secondNameIn">
+                <button>Подтвердить</button>
             </form>
         </div>
         <div id="getDataDiv">
@@ -49,4 +72,11 @@
         </div>
     </div>
 </body>
+
+
+<script>
+    let fierstName = document.getElementById("fierstNameIn").value
+    let secondName = document.getElementById("secondNameIn").value
+</script>
+
 </html>
