@@ -64,7 +64,7 @@
                 <br>
                 <label>Введите фамилию</label>
                 <input id="secondNameIn">
-                <button>Подтвердить</button>
+                <button onclick="AddDate()">Подтвердить</button>
             </form>
         </div>
         <div id="getDataDiv">
@@ -75,8 +75,14 @@
 
 
 <script>
-    let fierstName = document.getElementById("fierstNameIn").value
-    let secondName = document.getElementById("secondNameIn").value
+    function AddDate(){
+        let fierstNameInput = document.getElementById("fierstNameIn")
+        let secondNameInput = document.getElementById("secondNameIn")
+
+        let valueOfFierstName = fierstNameInput.value
+        let valueOfSecondName = secondNameInput.value
+    }
+    
 </script>
 
 </html>
