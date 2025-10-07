@@ -58,13 +58,13 @@
 <body>
     <div id="mainBlock">
         <div id="inputDataDiv">
-            <form action="" id="formsForDate">
+            <form id="formsForDate">
                 <label>Введите имя</label>
-                <input id="fierstNameIn">
+                <input id="fierstNameIn" required>
                 <br>
                 <label>Введите фамилию</label>
-                <input id="secondNameIn">
-                <button onclick="AddDate()">Подтвердить</button>
+                <input id="secondNameIn" required>
+                <button type="submit">Подтвердить</button>
             </form>
         </div>
         <div id="getDataDiv">
@@ -75,14 +75,37 @@
 
 
 <script>
-    function AddDate(){
-        let fierstNameInput = document.getElementById("fierstNameIn")
-        let secondNameInput = document.getElementById("secondNameIn")
+    document.getElementById("formsForDate").addEventListener("submit", async(e) =>{
+        e.preventDefault()
 
-        let valueOfFierstName = fierstNameInput.value
-        let valueOfSecondName = secondNameInput.value
-    }
-    
+        let fierstNameInput = document.getElementById("fierstNameIn").value
+        let secondNameInput = document.getElementById("secondNameIn").value
+
+        try{
+            const respons = await fetch("http://localhost:1200/users", {
+                method: "POST",
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: fierstNameInput,
+                    secondName: secondNameInput
+                })
+            })
+
+            if(respons.ok){
+                const data = await respons.json()
+                alert(`Данные отправлены: ${JSON.stringify(data)}`)
+                document.getElementById("formsForDate").reset() //clear form
+            }else{
+                alert("Ошибка при отправке данных")
+            }
+
+        }catch(err){
+            console.log(err.name)
+            alert("Произошла ошибка")
+        }
+    });
 </script>
 
 </html>

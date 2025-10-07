@@ -3,11 +3,13 @@ const dotenv = require("dotenv").config({
     debug: false,
     quiet: true
 })
+const cors = require("cors");
 const mongoose = require("mongoose")
 const express = require("express")
 const PORT = process.env.PORT || 1560
 
 const app = express()
+app.use(cors())
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.ptnrvcq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 
 
@@ -32,7 +34,7 @@ app.post('/users', async(req,res)=>{
         const newUser = new User({name, secondName})
         await newUser.save()
         res.status(201).json(newUser)
-    } catch(error){
+    } catch(err){
         res.status(500).json({error: err.name})
     }
 })
