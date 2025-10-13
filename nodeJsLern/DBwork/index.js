@@ -44,7 +44,7 @@ app.get('/users', async (req,res)=>{
     try{
         const users = await User.find()
         res.json(users)
-    } catch(error){
+    } catch(err){
         res.status(500).json({error: err.name})
     }
 })
