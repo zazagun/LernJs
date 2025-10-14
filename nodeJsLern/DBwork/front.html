@@ -31,7 +31,8 @@
 
     #getDataDiv{
         display: flex;
-        width: 250px;
+        min-width: 250px;
+        max-width: 1000px;
         border-radius: 25px;
         margin-right: 10%;
         border: solid;
@@ -51,6 +52,21 @@
     }
     button{
         margin-top: 4px;
+    }
+    #parentDiv table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    #parentDiv th, #parentDiv td {
+        padding: 8px;
+        text-align: center;
+        border-bottom: 1px solid rgba(80, 255, 197, 0.3);
+    }
+
+    #parentDiv th {
+        border-bottom: 1px solid rgb(80, 255, 197);
     }
 </style>
 
@@ -89,52 +105,47 @@
                 throw new Error(`Ошибка сервера: ${response.status}`)
             }
 
-            // 3. Получаем данные (массив пользователей)
+            //парс json
             const users = await response.json()
 
-            // 4. Очищаем родительский div перед новой загрузкой
             const parentDiv = document.getElementById("parentDiv");
             parentDiv.innerHTML = "";
 
-            // 5. Если пользователей нет, выводим сообщение
+            //обработка пустого ответа
             if (users.length === 0) {
                 parentDiv.innerHTML = "<p>Нет пользователей в базе.</p>";
                 return;
             }
 
-            // 6. Создаем таблицу для отображения пользователей
-            const table = document.createElement("table");
+            const table = document.createElement("table")
             table.style.width = "100%";
             table.style.borderCollapse = "collapse";
             table.style.color = "rgb(80, 255, 197)";
 
-            // 7. Добавляем заголовок таблицы
-            const thead = document.createElement("thead");
+            const thead = document.createElement("thead")
             thead.innerHTML = `
                 <tr>
                     <th style="border-bottom: 1px solid rgb(80, 255, 197); padding: 8px;">Имя</th>
                     <th style="border-bottom: 1px solid rgb(80, 255, 197); padding: 8px;">Фамилия</th>
                 </tr>
-            `;
+            `
             table.appendChild(thead);
 
-            // 8. Добавляем строки с пользователями
             const tbody = document.createElement("tbody");
             users.forEach((user) => {
                 const row = document.createElement("tr");
                 row.innerHTML = `
                     <td style="border-bottom: 1px solid rgba(80, 255, 197, 0.3); padding: 8px; text-align: center;">${user.name}</td>
-                    <td style="border-bottom: 1px solid rgba(80, 255, 197, 0.3); padding: 8px; text-align: center;">${user.secondName}</td>
+                    <td style="border-bottom: 1px solid rgba(80, 255, 197, 0.3); padding: 8px; text-align: center; ">${user.secondName}</td>
                 `;
                 tbody.appendChild(row);
             });
             table.appendChild(tbody);
 
-            // 9. Добавляем таблицу в parentDiv
             parentDiv.appendChild(table);
 
         } catch (err) {
-            console.error("Ошибка при получении данных:", err);
+            console.log("Ошибка при получении данных:", err);
             alert(`Произошла ошибка: ${err.message}`);
         }
     }
