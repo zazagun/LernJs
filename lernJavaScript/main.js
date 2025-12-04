@@ -1065,7 +1065,6 @@ const workWithMapIfilter = () => {
 // workWithMapIfilter()
 
 
-
 function studentsSome(){
     const students = [
         { id: 1, name: "Алиса", grades: [4, 5, 3, 5], course: 2 },
@@ -1133,6 +1132,44 @@ function usePromiseAll(){
         }}
     ))
 }
+
+
+//мемоизация
+function memoize(fn) {
+  const cache = {};
+
+  return function (arg) {
+    if (cache[arg] !== undefined) {
+      console.log("Возвращаем результат из кэша для аргумента:", arg);
+      return cache[arg];
+    }
+
+    // Вызываем функцию `fn` с аргументом `arg` и сохраняем результат в кэш
+    const result = fn(arg);
+    cache[arg] = result;
+    console.log("Вычисляем результат для аргумента:", arg);
+    return result;
+  };
+}
+
+// Пример функции, которую мы хотим мемоизировать
+function slowFunction(x) {
+  let result = 0;
+  for (let i = 0; i < x * 1000; i++) {
+    result += i;
+  }
+  return result;
+}
+
+// Мемоизируем функцию
+const memoizedSlowFunction = memoize(slowFunction);
+
+// Вызываем мемоизированную функцию
+// console.log(memoizedSlowFunction(1024)); 
+// console.log(memoizedSlowFunction(1024)); 
+// console.log(memoizedSlowFunction(512));  
+// console.log(memoizedSlowFunction(512));  
+
 
 
 
